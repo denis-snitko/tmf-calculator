@@ -12,7 +12,8 @@
 
 <body>
   <div class="container">
-    <div class="step first white-block js-step">
+    <div class="steps">
+      <div class="step first white-block js-step">
   <div class="step__title">
     <div class="step__button-open js-step-button-open">
       <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,10 +26,172 @@
     <span>ШАГ 1 - Отправление груза</span>
   </div>
   <div class="step__content">
-    content
+    <div class="row-flex">
+      <div class="col-4_82">
+        <div class="steps__second-title">Отправитель</div>
+        <div class="tabs">
+          <input class="tabs__input" id="tab-1" type="radio" name="name-1" checked>
+          <input class="tabs__input" id="tab-2" type="radio" name="name-1">
+
+          <div class="tabs__label-wrapper flex">
+            <label class="tabs__label js-tabs-label active" id="label-1" for="tab-1">Физическое лицо</label>
+            <label class="tabs__label js-tabs-label" id="label-2" for="tab-2">Юридическое лицо или ИП</label>
+          </div>
+
+
+          <div class="tabs__content" id="content-1">
+            <div class="base-input">
+              <input type="text" for="input-10" placeholder="ФИО">
+              <label for="input-10">ФИО</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-20" placeholder="Номер телефона">
+              <label for="input-20">Номер телефона</label>
+            </div>
+            <div class="h5">Паспортные данные</div>
+            <div class="flex">
+              <div class="base-input country">
+                <input type="text" for="input-101" placeholder="Страна регистрации">
+                <label for="input-101">Страна регистрации</label>
+              </div>
+              <div class="base-input series">
+                <input type="text" for="input-102" placeholder="Серия">
+                <label for="input-102">Серия</label>
+              </div>
+              <div class="base-input">
+                <input type="text" for="input-103" placeholder="Номер">
+                <label for="input-103">Номер</label>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input identification">
+                <input type="text" for="input-112" placeholder="Идентификационный номер">
+                <label for="input-112">Идентификационный номер</label>
+              </div>
+              <div class="base-input date">
+                <input type="text" for="input-113" placeholder="Дата">
+                <label for="input-113">Дата</label>
+              </div>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-30" placeholder="Адрес прописки">
+              <label for="input-30">Адрес прописки</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-40" placeholder="Кем выдан">
+              <label for="input-40">Кем выдан</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-40" placeholder="ID-паспорт, вид на жительство">
+              <label for="input-40">ID-паспорт, вид на жительство</label>
+            </div>
+          </div>
+
+          <div class="tabs__content" id="content-2">
+            <div class="base-input">
+              <input type="text" for="input-1" placeholder="Организация или ИП">
+              <label for="input-1">Организация или ИП</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-2" placeholder="УНП">
+              <label for="input-2">УНП</label>
+            </div>
+            <div class="h5">Контактные данные</div>
+            <div class="base-input">
+              <input type="text" for="input-3" placeholder="Контактное лицо">
+              <label for="input-3">Контактное лицо</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-4" placeholder="Номер телефона">
+              <label for="input-4">Номер телефона</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4_25">
+        <div class="steps__second-title">Адрес</div>
+        <div class="tabs">
+          <input class="tabs__input" id="tab-3" type="radio" name="name-2" checked>
+          <input class="tabs__input" id="tab-4" type="radio" name="name-2">
+
+          <div class="tabs__label-wrapper flex">
+            <label class="tabs__label js-tabs-label active" id="label-3" for="tab-3">Забрать у меня</label>
+            <label class="tabs__label js-tabs-label" id="label-4" for="tab-4">Привезу сам
+              -15%</label>
+          </div>
+
+
+          <div class="tabs__content" id="content-3">
+            as
+            <div class="base-input">
+              <input type="text" for="input-1122" placeholder="Город">
+              <label for="input-1122">Город</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-1123" placeholder="Улица">
+              <label for="input-1123">Улица</label>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input half">
+                <input type="text" for="input-1011" placeholder="Дом">
+                <label for="input-1011">Дом</label>
+              </div>
+              <div class="base-input half">
+                <input type="text" for="input-10211" placeholder="Кв/офис">
+                <label for="input-10211">Кв/офис</label>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input half">
+                <input type="text" for="input-11211" placeholder="Корпус">
+                <label for="input-11211">Корпус</label>
+              </div>
+              <div class="base-input half">
+                <input type="text" for="input-11311" placeholder="Этаж">
+                <label for="input-11311">Этаж</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__content" id="content-4">
+            <div class="base-input">
+              <input type="text" for="input-1122" placeholder="Город">
+              <label for="input-1122">Город</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-1123" placeholder="Улица">
+              <label for="input-1123">Улица</label>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input half">
+                <input type="text" for="input-1011" placeholder="Дом">
+                <label for="input-1011">Дом</label>
+              </div>
+              <div class="base-input half">
+                <input type="text" for="input-10211" placeholder="Кв/офис">
+                <label for="input-10211">Кв/офис</label>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input half">
+                <input type="text" for="input-11211" placeholder="Корпус">
+                <label for="input-11211">Корпус</label>
+              </div>
+              <div class="base-input half">
+                <input type="text" for="input-11311" placeholder="Этаж">
+                <label for="input-11311">Этаж</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2_93">
+        <div class="steps__second-title">Дата и время</div>
+      </div>
+    </div>
   </div>
 </div>
-    <div class="step second white-block js-step">
+      <div class="step second white-block js-step">
   <div class="step__title">
     <div class="step__button-open js-step-button-open">
       <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,42 +204,120 @@
     <span>ШАГ 2 - Параметры груза</span>
   </div>
   <div class="step__content">
-    content
+    <div class="row-flex">
+      <div class="col-2_97">
+        <div class="steps__second-title">Количество мест</div>
+      </div>
+      <div class="col-1_68">
+        <div class="steps__second-title">Вес</div>
+      </div>
+      <div class="col-3_5">
+        <div class="steps__second-title">Габариты</div>
+      </div>
+      <div class="col-3_85">
+        <div class="steps__second-title">Описание груза</div>
+      </div>
+    </div>
   </div>
 </div>
-    <div class="step third white-block js-step">
+      <div class="step third white-block js-step">
   <div class="step__title">
     <div class="step__button-open js-step-button-open">
       <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="10.5858" y1="6.00012" x2="6.34315" y2="1.75748" stroke="white" stroke-width="2"
-        stroke-linecap="round" />
+              stroke-linecap="round" />
         <line x1="6.34326" y1="1.75748" x2="2.10062" y2="6.00012" stroke="white" stroke-width="2"
-        stroke-linecap="round" />
+              stroke-linecap="round" />
       </svg>
     </div>
     <span>ШАГ 3 - Получение груза</span>
   </div>
   <div class="step__content">
-    content
+    <div class="row-flex">
+      <div class="col-4_82">
+        <div class="steps__second-title">Получатель</div>
+      </div>
+      <div class="col-4_25">
+        <div class="steps__second-title">Адрес</div>
+      </div>
+      <div class="col-2_93">
+        <div class="steps__second-title">Дата и время</div>
+      </div>
+    </div>
   </div>
 </div>
-    <div class="step fourth white-block js-step">
+      <div class="step fourth white-block js-step">
   <div class="step__title">
     <div class="step__button-open js-step-button-open">
       <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="10.5858" y1="6.00012" x2="6.34315" y2="1.75748" stroke="white" stroke-width="2"
-        stroke-linecap="round" />
+              stroke-linecap="round" />
         <line x1="6.34326" y1="1.75748" x2="2.10062" y2="6.00012" stroke="white" stroke-width="2"
-        stroke-linecap="round" />
+              stroke-linecap="round" />
       </svg>
     </div>
     <span>ШАГ 4 - Выбор услуги</span>
   </div>
   <div class="step__content">
-    content
+
+    <div class="row-flex">
+      <div class="col-3">
+        <div class="fourth__item">
+          <label class="custom-radio fourth__custom-radio" for="for-41">
+            <input class="custom-radio--hidden" id="for-41" type="radio" name="step-4" value="step-4">
+            <div class="custom-radio__pseudo"></div>
+            <div class="text">
+              <span class="title">Перевозка сборных грузов</span>
+              <span class="description">Перевозка с ТТН</span>
+              <span class="price">15,32 руб</span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="fourth__item">
+          <label class="custom-radio fourth__custom-radio" for="for-42">
+            <input class="custom-radio--hidden" id="for-42" type="radio" name="step-4" value="step-4" checked>
+            <div class="custom-radio__pseudo"></div>
+            <div class="text">
+              <span class="title">Курьерские отправления</span>
+              <span class="description">Перевозка с ТТН</span>
+              <span class="price">11,32 руб</span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="fourth__item">
+          <label class="custom-radio fourth__custom-radio" for="for-43">
+            <input class="custom-radio--hidden" id="for-43" type="radio" name="step-4" value="step-4">
+            <div class="custom-radio__pseudo"></div>
+            <div class="text">
+              <span class="title">Почтовое отправление</span>
+              <span class="description">Отправление с наложенным платежом</span>
+              <span class="price">15,32 руб</span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="fourth__item">
+          <label class="custom-radio fourth__custom-radio" for="for-44">
+            <input class="custom-radio--hidden" id="for-44" type="radio" name="step-4" value="step-4">
+            <div class="custom-radio__pseudo"></div>
+            <div class="text">
+              <span class="title">Прямая машина</span>
+              <span class="description">Перевозка только вашего груза</span>
+              <span class="price">215,32 руб</span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-    <div class="step fifth white-block js-step">
+</div>
+      <div class="step fifth white-block js-step">
   <div class="step__title">
     <div class="step__button-open js-step-button-open">
       <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,9 +330,91 @@
     <span>ШАГ 5 - Дополнительные услуги и упаковка</span>
   </div>
   <div class="step__content">
-    content
+
+    <div class="row-flex">
+      <div class="col-4">
+        <div class="steps__second-title">Доп услуги к отправлению</div>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-51">
+          <input class="custom-checkbox--hidden" id="for-51" type="checkbox" name="step-5" value="step-5" checked>
+          <div class="custom-checkbox__pseudo"></div>
+          Погрузка силами водителя
+        </label>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-52">
+          <input class="custom-checkbox--hidden" id="for-52" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Доп. точка – забор документов (в пределах города)
+        </label>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-53">
+          <input class="custom-checkbox--hidden" id="for-53" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Растентовка машины для боковой/верхней загрузки
+        </label>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-54">
+          <input class="custom-checkbox--hidden" id="for-54" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Доп. точка – забор груза (в пределах города)
+        </label>
+      </div>
+      <div class="col-4">
+        <div class="steps__second-title">Доп услуги к доставке</div>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-55">
+          <input class="custom-checkbox--hidden" id="for-55" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Выгрузка силами водителя
+        </label>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-56">
+          <input class="custom-checkbox--hidden" id="for-56" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Растентовка машины для боковой/верхней выгрузки
+        </label>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-57">
+          <input class="custom-checkbox--hidden" id="for-57" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Доп. точка – доставка документов (в пределах города)
+        </label>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-58">
+          <input class="custom-checkbox--hidden" id="for-58" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Доп. точка – доставка груза (в пределах города)
+        </label>
+      </div>
+      <div class="col-4">
+        <div class="steps__second-title">Упаковка</div>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-59">
+          <input class="custom-checkbox--hidden" id="for-59" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Упаковка в мешок с пломбой (950*550 мм)
+        </label>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-510">
+          <input class="custom-checkbox--hidden" id="for-510" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Коробка (500*300*300 мм)
+        </label>
+        <label class="custom-checkbox fifth__custom-checkbox" for="for-511">
+          <input class="custom-checkbox--hidden" id="for-511" type="checkbox" name="step-5" value="step-5">
+          <div class="custom-checkbox__pseudo"></div>
+          Упаковка стрейч-пленкой
+        </label>
+      </div>
+    </div>
   </div>
 </div>
+
+      <div class="steps__footer">
+        <div class="steps__footer-arrival">
+          <span class="bold">Прибытие груза:</span>
+          <span class="date">04.08.2022</span>
+        </div>
+        <div class="steps__footer-price">
+          <span class="bold">Стоимость:</span>
+          <span class="sum">30,50 руб</span>
+        </div>
+        <div class="steps__footer-button">
+          <div class="base-button">Оформить заявку</div>
+        </div>
+      </div>
+    </div>
+
   </div>
   <script src="./js/vendors.js"></script>
   <script src="./js/main.js"></script>

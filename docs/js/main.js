@@ -12,6 +12,26 @@ const openStepHandler = () => {
 	}
 };
 
+const activeTab = () => {
+	const EL_tabs = document.querySelectorAll(".tabs__input");
+
+	if (EL_tabs) {
+		EL_tabs.forEach((currentElement) => {
+			currentElement.addEventListener("click", () => {
+				currentElement
+					.closest(".tabs")
+					.querySelectorAll(".js-tabs-label")
+					.forEach((el) => el.classList.remove("active"));
+
+				document
+					.querySelector(`[for="${currentElement.id}"]`)
+					.classList.toggle("active");
+			});
+		});
+	}
+};
+
 addEventListener("DOMContentLoaded", () => {
 	openStepHandler();
+	activeTab();
 });

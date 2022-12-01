@@ -1,1 +1,7 @@
-.fifth {}
+.fifth {
+  &__custom-checkbox {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+}

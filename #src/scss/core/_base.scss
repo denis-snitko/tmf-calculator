@@ -1,6 +1,7 @@
 body {
 	padding: 50px 0;
 	background-color: #f7f7ff;
+	border: 1px solid #000;
 }
 
 img {
@@ -20,6 +21,109 @@ img {
 	@include container-full();
 }
 
+.row-flex {
+	@include row-flex();
+}
+
+.col-1_68 {
+	@include col();
+	@include size(1.68);
+}
+
+.col-2_93 {
+	@include col();
+	@include size(2.93);
+}
+
+.col-2_97 {
+	@include col();
+	@include size(2.97);
+}
+
+.col-3 {
+	@include col();
+	@include size(3);
+}
+
+.col-3_5 {
+	@include col();
+	@include size(3.5);
+}
+
+.col-3_85 {
+	@include col();
+	@include size(3.85);
+}
+
+.col-4 {
+	@include col();
+	@include size(4);
+}
+
+.col-4_25 {
+	@include col();
+	@include size(4.25);
+}
+
+.col-4_82 {
+	@include col();
+	@include size(4.82);
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.steps {
+	&__second-title {
+		margin-bottom: 24px;
+		padding-bottom: 16px;
+
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 20px;
+
+		color: $base-red;
+
+		border-bottom: 2px solid $base-red;
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		font-style: normal;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	&__footer-arrival {
+		font-size: 20px;
+	}
+
+	&__footer-price {
+		margin-left: 60px;
+	}
+
+	.date {
+		font-size: 18px;
+	}
+
+	.sum {
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 20px;
+
+		color: $base-red;
+	}
+
+	&__footer-button {
+		width: 219px;
+		margin-left: 60px;
+	}
+}
+
 .step {
 	margin-bottom: 35px;
 
@@ -28,9 +132,8 @@ img {
 	}
 
 	&.close .step__content {
-		height: 0;
-		visibility: hidden;
 		padding-top: 0;
+		display: none;
 	}
 
 	&__button-open {
@@ -46,7 +149,7 @@ img {
 		border-radius: 50%;
 		border: none;
 
-		background-color: #eb0045;
+		background-color: $base-red;
 
 		cursor: pointer;
 
@@ -66,14 +169,69 @@ img {
 		font-weight: 700;
 		font-size: rem(26px);
 		line-height: 20px;
-
-		color: #253746;
 	}
 
 	&__content {
-		transition: visibility, padding-top 0.1s ease-in-out;
+		transition: all 0.1s ease-in-out;
 
 		padding-top: 40px;
+	}
+}
+
+.tabs {
+	&__content {
+		display: none;
+		margin-top: 15px;
+	}
+
+	&__input {
+		display: none;
+	}
+
+	&__label {
+		display: inline-block;
+		padding: 12px 24px;
+		width: 100%;
+
+		color: $base-red;
+		text-align: center;
+
+		border: 1px solid $base-red;
+		border-radius: 3px;
+
+		white-space: nowrap;
+
+		transition: $base-transition;
+
+		&:last-child {
+			margin-left: -4px;
+		}
+	}
+
+	&__label:hover {
+		color: #ffffff;
+		background-color: $base-red;
+		cursor: pointer;
+	}
+
+	#tab-1:checked ~ #label-1,
+	#tab-2:checked ~ #label-2,
+	#tab-3:checked ~ #label-3,
+	#tab-4:checked ~ #label-4 {
+		color: #ffffff;
+		background-color: $base-red;
+	}
+
+	&__label.active {
+		color: #ffffff;
+		background-color: $base-red;
+	}
+
+	#tab-1:checked ~ #content-1,
+	#tab-2:checked ~ #content-2,
+	#tab-3:checked ~ #content-3,
+	#tab-4:checked ~ #content-4 {
+		display: block;
 	}
 }
 
@@ -82,4 +240,111 @@ img {
 	background-color: #ffffff;
 	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
 	border-radius: 4px;
+}
+
+.base-input {
+	position: relative;
+	padding-top: 22px;
+
+	& label {
+		position: absolute;
+		left: 4px;
+		top: 5px;
+		font-size: 12px;
+		visibility: hidden;
+		color: transparent;
+
+		transition: all 0.15s linear;
+	}
+
+	& input {
+		width: 100%;
+		padding: 12px 19px;
+		background-color: #f6f6ff;
+		border: none;
+		border-radius: 3px;
+
+		color: $base-text-color;
+
+		&::placeholder {
+			font-size: 12px;
+			color: #a2aab5;
+		}
+
+		&:focus ~ label {
+			visibility: visible;
+			color: #a2aab5;
+		}
+
+		&:not(:placeholder-shown) ~ label {
+			visibility: visible;
+			color: #a2aab5;
+		}
+
+		&:focus::placeholder {
+			color: transparent;
+		}
+	}
+
+	&.country {
+		input {
+			width: 205px;
+		}
+
+		margin-right: 22px;
+	}
+
+	&.series {
+		margin-right: 22px;
+
+		input {
+			width: 90px;
+		}
+	}
+
+	&.identification {
+		margin-right: 22px;
+
+		input {
+			width: 278px;
+		}
+	}
+
+	&.date {
+		input {
+			width: 150px;
+		}
+	}
+
+	&.half {
+		width: calc(50% - 11px);
+	}
+}
+
+.flex {
+	display: flex;
+}
+
+.direction-column {
+	flex-direction: column;
+}
+
+.no-wrap {
+	flex-wrap: nowrap;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.items-end {
+	align-items: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-between {
+	justify-content: space-between;
 }

@@ -5,7 +5,7 @@ const smartGridOptions = {
   outputStyle: 'scss',
   filename: '_smart-grid',
   columns: 12, // number of grid columns
-  offset: '30px', 
+  offset: '40px', 
   mobileFirst: false,
   mixinNames: {
     container: 'container',

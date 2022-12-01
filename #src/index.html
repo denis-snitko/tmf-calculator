@@ -12,11 +12,28 @@
 
 <body>
   <div class="container">
-    @@include('modules/steps/first/first.html')
-    @@include('modules/steps/second/second.html')
-    @@include('modules/steps/third/third.html')
-    @@include('modules/steps/fourth/fourth.html')
-    @@include('modules/steps/fifth/fifth.html')
+    <div class="steps">
+      @@include('modules/steps/first/first.html')
+      @@include('modules/steps/second/second.html')
+      @@include('modules/steps/third/third.html')
+      @@include('modules/steps/fourth/fourth.html')
+      @@include('modules/steps/fifth/fifth.html')
+
+      <div class="steps__footer">
+        <div class="steps__footer-arrival">
+          <span class="bold">Прибытие груза:</span>
+          <span class="date">04.08.2022</span>
+        </div>
+        <div class="steps__footer-price">
+          <span class="bold">Стоимость:</span>
+          <span class="sum">30,50 руб</span>
+        </div>
+        <div class="steps__footer-button">
+          <div class="base-button">Оформить заявку</div>
+        </div>
+      </div>
+    </div>
+
   </div>
   <script src="./js/vendors.js"></script>
   <script src="./js/main.js"></script>
