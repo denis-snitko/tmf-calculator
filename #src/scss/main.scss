@@ -1,0 +1,28 @@
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/functions';
+
+@import './vendors/smart-grid';
+
+/* Normalize */
+@import './vendors/normalize';
+/* End Normalize */
+
+/* Fonts */
+@import 'core/fonts';
+/* End Fonts */
+
+/* Typography */
+@import 'core/typography';
+/* End Typography */
+
+/* Base styles */
+@import 'core/base';
+/* End Base styles */
+
+/* MAIN STYLES */
+@import '../modules/modules';
+/* END MAIN STYLES */
+
+/* ----------=====---------- */
+/* MEDIA */
