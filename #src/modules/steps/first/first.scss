@@ -1,1 +1,9 @@
-.first {}
+.first {
+  .steps__second-title {
+    margin-bottom: 30px;
+  }
+
+  &__textarea {
+    margin-top: 28px;
+  }
+}

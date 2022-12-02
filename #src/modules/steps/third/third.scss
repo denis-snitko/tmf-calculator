@@ -1,1 +1,5 @@
-.third {}
+.third {
+  &__textarea {
+    margin-top: 28px;
+  }
+}

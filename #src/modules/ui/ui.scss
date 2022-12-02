@@ -1,5 +1,4 @@
 // button
-
 .base-button {
   max-width: 219px;
   width: 100%;
@@ -15,6 +14,12 @@
   border-radius: 3px;
 
   cursor: pointer;
+
+  transition: $base-transition;
+
+  &:hover {
+    background-color: #FF004B;
+  }
 }
 
 // checkbox
@@ -52,13 +57,12 @@
     border: 1px solid $base-red;
     border-radius: 3px;
 
-    
     &:after {
       content: '';
       position: absolute;
       top: calc(50% - 5px);
       left: calc(50% - 5px);
-      
+
       width: 10px;
       height: 10px;
       background-color: transparent;
@@ -69,12 +73,12 @@
 }
 
 //radio
-
 .custom-radio {
   display: flex;
-  width: 100%;
 
-  font-size: 15px;
+  font-size: rem(15px);
+  font-weight: 400;
+  color: $base-text-color;
 
   cursor: pointer;
 
@@ -104,13 +108,12 @@
     border: 1px solid $base-red;
     border-radius: 50%;
 
-    
     &:after {
       content: '';
       position: absolute;
       top: calc(50% - 5px);
       left: calc(50% - 5px);
-      
+
       width: 10px;
       height: 10px;
       background-color: transparent;
@@ -119,3 +122,141 @@
     }
   }
 }
+
+// input
+.base-input {
+	position: relative;
+	padding-top: 22px;
+
+	& label {
+		position: absolute;
+		left: 4px;
+		top: 5px;
+		font-size: 12px;
+		visibility: hidden;
+		color: transparent;
+
+		transition: all 0.15s linear;
+	}
+
+	& input {
+		width: 100%;
+		padding: 12px 19px;
+		background-color: #f6f6ff;
+		border: none;
+		border-radius: 3px;
+
+		color: $base-text-color;
+
+		&::placeholder {
+			font-size: 12px;
+			color: #a2aab5;
+		}
+
+		&:focus ~ label {
+			visibility: visible;
+			color: #a2aab5;
+		}
+
+		&:not(:placeholder-shown) ~ label {
+			visibility: visible;
+			color: #a2aab5;
+		}
+
+		&:focus::placeholder {
+			color: transparent;
+		}
+	}
+
+	&.country {
+		input {
+			width: 205px;
+		}
+
+		margin-right: 22px;
+	}
+
+	&.series {
+		margin-right: 22px;
+
+		input {
+			width: 90px;
+		}
+	}
+
+	&.identification {
+		margin-right: 22px;
+
+		input {
+			width: 278px;
+		}
+	}
+
+	&.date {
+		input {
+			width: 150px;
+		}
+	}
+
+	&.half {
+		width: calc(50% - 11px);
+	}
+
+  &.time {
+    width: 113px;
+  }
+}
+
+.time-divider {
+  padding-top: 20px;
+}
+
+
+// textarea
+
+.base-textarea {
+	position: relative;
+	padding-top: 22px;
+
+	& label {
+		position: absolute;
+		left: 4px;
+		top: 5px;
+		font-size: 12px;
+		visibility: hidden;
+		color: transparent;
+
+		transition: all 0.15s linear;
+	}
+
+	& textarea {
+		width: 100%;
+    height: 73px;
+		padding: 12px 19px;
+		background-color: #f6f6ff;
+		border: none;
+		border-radius: 3px;
+
+		color: $base-text-color;
+
+		&::placeholder {
+			font-size: 12px;
+			color: #a2aab5;
+		}
+
+		&:focus ~ label {
+			visibility: visible;
+			color: #a2aab5;
+		}
+
+		&:not(:placeholder-shown) ~ label {
+			visibility: visible;
+			color: #a2aab5;
+		}
+
+		&:focus::placeholder {
+			color: transparent;
+		}
+	}
+}
+

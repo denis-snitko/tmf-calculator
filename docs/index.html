@@ -28,7 +28,14 @@
   <div class="step__content">
     <div class="row-flex">
       <div class="col-4_82">
-        <div class="steps__second-title">Отправитель</div>
+        <div class="steps__second-title flex items-center justify-between">
+          Отправитель
+          <label class="custom-radio" for="for-581">
+            <input class="custom-radio--hidden" id="for-581" type="radio" name="step-581" value="step-581">
+            <div class="custom-radio__pseudo"></div>
+            Плательщик
+          </label>
+        </div>
         <div class="tabs">
           <input class="tabs__input" id="tab-1" type="radio" name="name-1" checked>
           <input class="tabs__input" id="tab-2" type="radio" name="name-1">
@@ -109,7 +116,14 @@
         </div>
       </div>
       <div class="col-4_25">
-        <div class="steps__second-title">Адрес</div>
+        <div class="steps__second-title  flex items-center justify-between">
+          Адрес
+          <label class="custom-radio" for="for-681">
+            <input class="custom-radio--hidden" id="for-681" type="radio" name="step-681" value="step-581">
+            <div class="custom-radio__pseudo"></div>
+            Координаты
+          </label>
+        </div>
         <div class="tabs">
           <input class="tabs__input" id="tab-3" type="radio" name="name-2" checked>
           <input class="tabs__input" id="tab-4" type="radio" name="name-2">
@@ -183,12 +197,58 @@
               </div>
             </div>
           </div>
+
+          <button class="show-map">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10Z" stroke="#EB0045" stroke-width="2"/>
+              <path d="M3.19707 7.31455C4.79633 0.223027 15.2118 0.231216 16.803 7.32274C17.7365 11.4827 15.1712 15.0039 12.9225 17.1821C10 19.606 10 19.606 7.06939 17.1821C4.8288 15.0039 2.26349 11.4745 3.19707 7.31455Z" stroke="#EB0045" stroke-width="2"/>
+              </svg>              
+            Посмотреть место на карте
+          </button>
+
         </div>
       </div>
       <div class="col-2_93">
-        <div class="steps__second-title">Дата и время</div>
+        <div class="steps__second-title flex items-center" style="margin-bottom: 10px;">
+          Дата и время
+          <div class="question">
+            <div class="question__tooltip">
+              tooltip tooltip tooltip tooltip tooltip tooltip tooltip
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="base-input time">
+            <input type="text" for="input-456" placeholder="00:00">
+            <label for="input-456">Время</label>
+          </div>
+          <span class="time-divider">-</span>
+          <div class="base-input time">
+            <input type="text" for="input-456" placeholder="00:00">
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="base-input time">
+            <input type="text" for="input-459" placeholder="00:00">
+            <label for="input-459">Обед</label>
+          </div>
+          <span class="time-divider">-</span>
+          <div class="base-input time">
+            <input type="text" for="input-459" placeholder="00:00">
+          </div>
+        </div>
+        
       </div>
     </div>
+
+      <div class="first__textarea">
+        <div class="base-textarea">
+          <textarea name="textarea-11" for="input-10" placeholder="Ваш комментарий"></textarea>
+          <label for="input-10">Ваш комментарий</label>
+        </div>
+      </div>
   </div>
 </div>
       <div class="step second white-block js-step">
@@ -202,20 +262,74 @@
       </svg>
     </div>
     <span>ШАГ 2 - Параметры груза</span>
+    <button class="add-cargo">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6V14C18 16.4 16.6667 18 13.5556 18H6.44444C3.33333 18 2 16.4 2 14V6C2 3.6 3.33333 2 6.44444 2H13.5556C16.6667 2 18 3.6 18 6Z" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 10H13" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.9" d="M10 13L10 7" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      Добавить груз
+    </button>
   </div>
   <div class="step__content">
     <div class="row-flex">
       <div class="col-2_97">
-        <div class="steps__second-title">Количество мест</div>
+        <div class="steps__second-title" style="margin-bottom: 30px;">Количество мест</div>
+        <label class="custom-radio second__custom-radio" for="for-281">
+          <input class="custom-radio--hidden" id="for-281" type="radio" name="step-281" value="step-282" checked>
+          <div class="custom-radio__pseudo"></div>
+          Параметры одного места
+          <div class="question">
+            <div class="question__tooltip">
+              tooltip tooltip 
+            </div>
+          </div>
+        </label>
+        <label class="custom-radio second__custom-radio" for="for-282">
+          <input class="custom-radio--hidden" id="for-282" type="radio" name="step-281" value="step-282">
+          <div class="custom-radio__pseudo"></div>
+          Параметры всех мест
+          <div class="question">
+            <div class="question__tooltip">
+              tooltip tooltip tooltip tooltip tooltip tooltip tooltip
+            </div>
+          </div>
+        </label>
       </div>
       <div class="col-1_68">
         <div class="steps__second-title">Вес</div>
+        <div class="base-input second__base-input">
+          <input type="text" for="input-3422" placeholder="0 кг">
+          <label for="input-3422">кг</label>
+        </div>
       </div>
       <div class="col-3_5">
         <div class="steps__second-title">Габариты</div>
+        <div class="base-input second__base-input second__base-input--dimensions">
+          <input type="text" for="input-5422" placeholder="0 м">
+          <label for="input-5422">Длина</label>
+        </div>
+        <div class="base-input second__base-input second__base-input--dimensions">
+          <input type="text" for="input-5423" placeholder="0 м">
+          <label for="input-5423">Ширина</label>
+        </div>
+        <div class="base-input second__base-input second__base-input--dimensions">
+          <input type="text" for="input-5424" placeholder="0 м">
+          <label for="input-5424">Высота</label>
+        </div>
+        <div class="base-input second__base-input second__base-input--dimensions">
+          <input type="text" for="input-5425" placeholder="0 м">
+          <label for="input-5425">Объем</label>
+        </div>
       </div>
       <div class="col-3_85">
         <div class="steps__second-title">Описание груза</div>
+        <div class="second__textarea">
+          <div class="base-textarea">
+            <textarea name="textarea-111" for="input-101" placeholder="Ваш вариант груза"></textarea>
+            <label for="input-101">Ваш вариант груза</label>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -242,6 +356,13 @@
       </div>
       <div class="col-2_93">
         <div class="steps__second-title">Дата и время</div>
+      </div>
+    </div>
+
+    <div class="third__textarea">
+      <div class="base-textarea">
+        <textarea name="textarea-12" for="input-11" placeholder="Ваш комментарий"></textarea>
+        <label for="input-11">Ваш комментарий</label>
       </div>
     </div>
   </div>

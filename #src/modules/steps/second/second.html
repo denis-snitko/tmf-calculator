@@ -9,20 +9,74 @@
       </svg>
     </div>
     <span>ШАГ 2 - Параметры груза</span>
+    <button class="add-cargo">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6V14C18 16.4 16.6667 18 13.5556 18H6.44444C3.33333 18 2 16.4 2 14V6C2 3.6 3.33333 2 6.44444 2H13.5556C16.6667 2 18 3.6 18 6Z" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 10H13" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.9" d="M10 13L10 7" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      Добавить груз
+    </button>
   </div>
   <div class="step__content">
     <div class="row-flex">
       <div class="col-2_97">
-        <div class="steps__second-title">Количество мест</div>
+        <div class="steps__second-title" style="margin-bottom: 30px;">Количество мест</div>
+        <label class="custom-radio second__custom-radio" for="for-281">
+          <input class="custom-radio--hidden" id="for-281" type="radio" name="step-281" value="step-282" checked>
+          <div class="custom-radio__pseudo"></div>
+          Параметры одного места
+          <div class="question">
+            <div class="question__tooltip">
+              tooltip tooltip 
+            </div>
+          </div>
+        </label>
+        <label class="custom-radio second__custom-radio" for="for-282">
+          <input class="custom-radio--hidden" id="for-282" type="radio" name="step-281" value="step-282">
+          <div class="custom-radio__pseudo"></div>
+          Параметры всех мест
+          <div class="question">
+            <div class="question__tooltip">
+              tooltip tooltip tooltip tooltip tooltip tooltip tooltip
+            </div>
+          </div>
+        </label>
       </div>
       <div class="col-1_68">
         <div class="steps__second-title">Вес</div>
+        <div class="base-input second__base-input">
+          <input type="text" for="input-3422" placeholder="0 кг">
+          <label for="input-3422">кг</label>
+        </div>
       </div>
       <div class="col-3_5">
         <div class="steps__second-title">Габариты</div>
+        <div class="base-input second__base-input second__base-input--dimensions">
+          <input type="text" for="input-5422" placeholder="0 м">
+          <label for="input-5422">Длина</label>
+        </div>
+        <div class="base-input second__base-input second__base-input--dimensions">
+          <input type="text" for="input-5423" placeholder="0 м">
+          <label for="input-5423">Ширина</label>
+        </div>
+        <div class="base-input second__base-input second__base-input--dimensions">
+          <input type="text" for="input-5424" placeholder="0 м">
+          <label for="input-5424">Высота</label>
+        </div>
+        <div class="base-input second__base-input second__base-input--dimensions">
+          <input type="text" for="input-5425" placeholder="0 м">
+          <label for="input-5425">Объем</label>
+        </div>
       </div>
       <div class="col-3_85">
         <div class="steps__second-title">Описание груза</div>
+        <div class="second__textarea">
+          <div class="base-textarea">
+            <textarea name="textarea-111" for="input-101" placeholder="Ваш вариант груза"></textarea>
+            <label for="input-101">Ваш вариант груза</label>
+          </div>
+        </div>
       </div>
     </div>
   </div>

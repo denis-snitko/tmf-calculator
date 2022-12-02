@@ -1,4 +1,8 @@
 .fifth {
+  .steps__second-title {
+    margin-bottom: 30px;
+  }
+
   &__custom-checkbox {
     &:not(:last-child) {
       margin-bottom: 14px;

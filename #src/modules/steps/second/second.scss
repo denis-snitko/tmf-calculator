@@ -1,1 +1,30 @@
-.second {}
+.second {
+  .steps__second-title {
+    margin-bottom: 8px;
+  }
+
+  &__custom-radio {
+    margin-bottom: 14px;
+  }
+
+  &__custom-radio:first-child {
+    padding-top: 22px;
+  }
+
+  &__textarea {
+    textarea {
+      height: 40px;
+    }
+  }
+
+  &__base-input {
+    input::placeholder {
+      text-align: center;
+    }
+
+    &--dimensions {
+      display: inline-block;
+      max-width: 102px;
+    }
+  }
+}
