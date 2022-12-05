@@ -51,8 +51,109 @@ const counter = () => {
   });
 };
 
+const calendar = () => {
+  const today = new Date();
+  let dayInt = today.getDate();
+  let month = today.getMonth();
+  let year = today.getFullYear();
+
+  const calendarBody = document.querySelector('.js-calendar-days');
+
+  const months = [
+    'Январь',
+    'Февраль',
+    'Март',
+    'Апрель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+    'Ноябрь',
+    'Декабрь',
+  ];
+
+  const nextBtn = document.querySelector('.js-calendar-next');
+  const prevBtn = document.querySelector('.js-calendar-prev');
+
+  const showDate = (event) => {
+    calendarBody.querySelectorAll('li').forEach((el) => el.classList.remove('active'));
+
+    event.classList.add('active');
+
+    let showYear = event.getAttribute('data-year');
+    let showMonth = event.getAttribute('data-month');
+    let showDay = event.getAttribute('data-day');
+
+    console.log(`${showDay} ${months[showMonth]} ${showYear}`);
+  };
+
+  const daysInMonth = (month, year) => {
+    return new Date(year, month + 1, 0).getDate();
+  };
+
+  const blankDates = (count) => {
+    for (let x = 0; x < count; x++) {
+      let cell = document.createElement('li');
+      let cellText = document.createTextNode('');
+      cell.appendChild(cellText);
+      cell.classList.add('empty');
+      calendarBody.appendChild(cell);
+    }
+  };
+
+  const showCalendar = (month, year) => {
+    let firstDay = new Date(year, month).getDay();
+    calendarBody.innerHTML = '';
+    let totalDays = daysInMonth(month, year);
+
+    blankDates(firstDay === 0 ? 6 : firstDay - 1);
+    for (let day = 1; day <= totalDays; day++) {
+      const cell = document.createElement('li');
+      const cellText = document.createTextNode(day);
+
+      if (dayInt === day && month === today.getMonth() && year === today.getFullYear()) {
+        cell.classList.add('active');
+      }
+
+      cell.setAttribute('data-day', day);
+      cell.setAttribute('data-month', month);
+      cell.setAttribute('data-year', year);
+
+      cell.classList.add('singleDay');
+      cell.appendChild(cellText);
+      cell.onclick = function (e) {
+        showDate(e.target);
+      };
+      calendarBody.appendChild(cell);
+    }
+
+    document.querySelector('.js-calendar-month').innerHTML = `${months[month]}, `;
+    document.querySelector('.js-calendar-year').innerHTML = year;
+  };
+
+  showCalendar(month, year);
+
+  const next = () => {
+    year = month === 11 ? year + 1 : year;
+    month = (month + 1) % 12;
+    showCalendar(month, year);
+  };
+
+  const previous = () => {
+    year = month === 0 ? year - 1 : year;
+    month = month === 0 ? 11 : month - 1;
+    showCalendar(month, year);
+  };
+
+  prevBtn.addEventListener('click', () => previous());
+  nextBtn.addEventListener('click', () => next());
+};
+
 addEventListener('DOMContentLoaded', () => {
   openStepHandler();
   activeTab();
   counter();
+  calendar();
 });
