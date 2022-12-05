@@ -11,6 +11,34 @@ img {
   object-fit: cover;
 }
 
+.flex {
+  display: flex;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 .container {
   width: 100%;
   @include container();
@@ -485,7 +513,7 @@ img {
 
   &__days {
     padding: 10px 20px;
-    background-color: #F6F6FF;
+    background-color: #f6f6ff;
     margin: 0;
 
     & li {
@@ -518,7 +546,7 @@ img {
   }
 
   &__prev,
-    &__next {
+  &__next {
     cursor: pointer;
   }
 
@@ -538,30 +566,3 @@ img {
   }
 }
 
-.flex {
-  display: flex;
-}
-
-.direction-column {
-  flex-direction: column;
-}
-
-.no-wrap {
-  flex-wrap: nowrap;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.items-end {
-  align-items: flex-end;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
