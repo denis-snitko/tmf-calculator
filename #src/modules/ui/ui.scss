@@ -11,6 +11,7 @@
   text-align: center;
 
   background-color: $base-red;
+	border: 1px solid transparent;
   border-radius: 3px;
 
   cursor: pointer;
@@ -20,6 +21,13 @@
   &:hover {
     background-color: #FF004B;
   }
+
+	&--reverse {
+		color: $base-red;
+		background-color: transparent;
+		border: 1px solid #EBEBF4;
+
+	}
 }
 
 // checkbox

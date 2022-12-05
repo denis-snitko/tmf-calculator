@@ -29,6 +29,34 @@
     }
   }
 
+  &__counter {
+    display: flex;
+    align-items: center;
+
+    & .base-input{
+      max-width: 94px;
+      margin: 0 7px;
+      padding-top: 0;
+
+      input {
+        text-align: center;
+      }
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      &:hover {
+        color: #ffffff;
+        background-color: $base-red;
+      }
+    }
+
+  }
+
   @media (max-width: 576px) {
     padding-top: 36px;
   }
