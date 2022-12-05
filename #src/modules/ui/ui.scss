@@ -143,7 +143,7 @@
 		width: 100%;
 		padding: 12px 19px;
 		background-color: #f6f6ff;
-		border: none;
+		border: 1px solid transparent;
 		border-radius: 3px;
 
 		color: $base-text-color;
@@ -169,33 +169,26 @@
 	}
 
 	&.country {
-		input {
-			width: 205px;
-		}
-
+		max-width: 205px;
+		width: 100%;
 		margin-right: 22px;
 	}
 
 	&.series {
+		max-width: 90px;
+		width: 100%;
 		margin-right: 22px;
-
-		input {
-			width: 90px;
-		}
 	}
 
 	&.identification {
 		margin-right: 22px;
-
-		input {
-			width: 278px;
-		}
+		max-width: 278px;
+		width: 100%;
 	}
 
 	&.date {
-		input {
-			width: 150px;
-		}
+		max-width: 150px;
+		width: 100%;
 	}
 
 	&.half {
@@ -203,7 +196,12 @@
 	}
 
   &.time {
-    width: 113px;
+    max-width: 113px;
+		width: 100%;
+
+		@media (max-width: 1024px) {
+			max-width: 72px;
+		}
   }
 }
 

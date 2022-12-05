@@ -11,8 +11,8 @@ const smartGridOptions = {
     container: 'container',
   },
   container: {
-    maxWidth: '1280px',
-    fields: '0', 
+    maxWidth: '1320px',
+    fields: '20px', 
   },
   breakPoints: {
     xxs: {

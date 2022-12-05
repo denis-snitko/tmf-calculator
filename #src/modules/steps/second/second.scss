@@ -25,6 +25,11 @@
     &--dimensions {
       display: inline-block;
       max-width: 102px;
+      width: 100%;
     }
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 36px;
   }
 }

@@ -13,21 +13,225 @@
   <div class="step__content">
     <div class="row-flex">
       <div class="col-4_82">
-        <div class="steps__second-title">Получатель</div>
+        <div class="steps__second-title flex items-center justify-between">
+          Отправитель
+          <label class="custom-radio" for="for-581">
+            <input class="custom-radio--hidden" id="for-581" type="radio" name="step-581" value="step-581">
+            <div class="custom-radio__pseudo"></div>
+            Плательщик
+          </label>
+        </div>
+        <div class="tabs">
+          <input class="tabs__input" id="tab-5" type="radio" name="name-3" checked>
+          <input class="tabs__input" id="tab-6" type="radio" name="name-3">
+
+          <div class="tabs__label-wrapper flex">
+            <label class="tabs__label js-tabs-label active" id="label-5" for="tab-5">Физическое лицо</label>
+            <label class="tabs__label js-tabs-label" id="label-6" for="tab-6">Юридическое лицо или ИП</label>
+          </div>
+
+
+          <div class="tabs__content" id="content-5">
+            <div class="base-input">
+              <input type="text" for="input-10" placeholder="ФИО">
+              <label for="input-10">ФИО</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-20" placeholder="Номер телефона">
+              <label for="input-20">Номер телефона</label>
+            </div>
+            <div class="h5">Паспортные данные</div>
+            <div class="flex">
+              <div class="base-input country">
+                <input type="text" for="input-101" placeholder="Страна регистрации">
+                <label for="input-101">Страна регистрации</label>
+              </div>
+              <div class="base-input series">
+                <input type="text" for="input-102" placeholder="Серия">
+                <label for="input-102">Серия</label>
+              </div>
+              <div class="base-input">
+                <input type="text" for="input-103" placeholder="Номер">
+                <label for="input-103">Номер</label>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input identification">
+                <input type="text" for="input-112" placeholder="Идентификационный номер">
+                <label for="input-112">Идентификационный номер</label>
+              </div>
+              <div class="base-input date">
+                <input type="text" for="input-113" placeholder="Дата">
+                <label for="input-113">Дата</label>
+              </div>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-30" placeholder="Адрес прописки">
+              <label for="input-30">Адрес прописки</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-40" placeholder="Кем выдан">
+              <label for="input-40">Кем выдан</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-40" placeholder="ID-паспорт, вид на жительство">
+              <label for="input-40">ID-паспорт, вид на жительство</label>
+            </div>
+          </div>
+
+          <div class="tabs__content" id="content-6">
+            <div class="base-input">
+              <input type="text" for="input-1" placeholder="Организация или ИП">
+              <label for="input-1">Организация или ИП</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-2" placeholder="УНП">
+              <label for="input-2">УНП</label>
+            </div>
+            <div class="h5">Контактные данные</div>
+            <div class="base-input">
+              <input type="text" for="input-3" placeholder="Контактное лицо">
+              <label for="input-3">Контактное лицо</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-4" placeholder="Номер телефона">
+              <label for="input-4">Номер телефона</label>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-4_25">
-        <div class="steps__second-title">Адрес</div>
+        <div class="steps__second-title  flex items-center justify-between">
+          Адрес
+          <label class="custom-radio" for="for-681">
+            <input class="custom-radio--hidden" id="for-681" type="radio" name="step-681" value="step-581">
+            <div class="custom-radio__pseudo"></div>
+            Координаты
+          </label>
+        </div>
+        <div class="tabs">
+          <input class="tabs__input" id="tab-7" type="radio" name="name-4" checked>
+          <input class="tabs__input" id="tab-8" type="radio" name="name-4">
+
+          <div class="tabs__label-wrapper flex">
+            <label class="tabs__label js-tabs-label active" id="label-7" for="tab-7">Забрать у меня</label>
+            <label class="tabs__label js-tabs-label" id="label-8" for="tab-8">Привезу сам
+              -15%</label>
+          </div>
+
+
+          <div class="tabs__content" id="content-7">
+            <div class="base-input">
+              <input type="text" for="input-1122" placeholder="Город">
+              <label for="input-1122">Город</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-1123" placeholder="Улица">
+              <label for="input-1123">Улица</label>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input half">
+                <input type="text" for="input-1011" placeholder="Дом">
+                <label for="input-1011">Дом</label>
+              </div>
+              <div class="base-input half">
+                <input type="text" for="input-10211" placeholder="Кв/офис">
+                <label for="input-10211">Кв/офис</label>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input half">
+                <input type="text" for="input-11211" placeholder="Корпус">
+                <label for="input-11211">Корпус</label>
+              </div>
+              <div class="base-input half">
+                <input type="text" for="input-11311" placeholder="Этаж">
+                <label for="input-11311">Этаж</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__content" id="content-8">
+            <div class="base-input">
+              <input type="text" for="input-1122" placeholder="Город">
+              <label for="input-1122">Город</label>
+            </div>
+            <div class="base-input">
+              <input type="text" for="input-1123" placeholder="Улица">
+              <label for="input-1123">Улица</label>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input half">
+                <input type="text" for="input-1011" placeholder="Дом">
+                <label for="input-1011">Дом</label>
+              </div>
+              <div class="base-input half">
+                <input type="text" for="input-10211" placeholder="Кв/офис">
+                <label for="input-10211">Кв/офис</label>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div class="base-input half">
+                <input type="text" for="input-11211" placeholder="Корпус">
+                <label for="input-11211">Корпус</label>
+              </div>
+              <div class="base-input half">
+                <input type="text" for="input-11311" placeholder="Этаж">
+                <label for="input-11311">Этаж</label>
+              </div>
+            </div>
+          </div>
+
+          <button class="show-map">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10Z" stroke="#EB0045" stroke-width="2"/>
+              <path d="M3.19707 7.31455C4.79633 0.223027 15.2118 0.231216 16.803 7.32274C17.7365 11.4827 15.1712 15.0039 12.9225 17.1821C10 19.606 10 19.606 7.06939 17.1821C4.8288 15.0039 2.26349 11.4745 3.19707 7.31455Z" stroke="#EB0045" stroke-width="2"/>
+              </svg>              
+            Посмотреть место на карте
+          </button>
+
+        </div>
       </div>
       <div class="col-2_93">
-        <div class="steps__second-title">Дата и время</div>
+        <div class="steps__second-title flex items-center" style="margin-bottom: 10px;">
+          Дата и время
+          <div class="question">
+            <div class="question__tooltip">
+              tooltip tooltip tooltip tooltip tooltip tooltip tooltip
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="base-input time">
+            <input type="text" for="input-456" placeholder="00:00">
+            <label for="input-456">Время</label>
+          </div>
+          <span class="time-divider">-</span>
+          <div class="base-input time">
+            <input type="text" for="input-456" placeholder="00:00">
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="base-input time">
+            <input type="text" for="input-459" placeholder="00:00">
+            <label for="input-459">Обед</label>
+          </div>
+          <span class="time-divider">-</span>
+          <div class="base-input time">
+            <input type="text" for="input-459" placeholder="00:00">
+          </div>
+        </div>
+        
       </div>
     </div>
 
-    <div class="third__textarea">
-      <div class="base-textarea">
-        <textarea name="textarea-12" for="input-11" placeholder="Ваш комментарий"></textarea>
-        <label for="input-11">Ваш комментарий</label>
+      <div class="first__textarea">
+        <div class="base-textarea">
+          <textarea name="textarea-11" for="input-10" placeholder="Ваш комментарий"></textarea>
+          <label for="input-10">Ваш комментарий</label>
+        </div>
       </div>
-    </div>
   </div>
 </div>
