@@ -151,9 +151,44 @@ const calendar = () => {
   nextBtn.addEventListener('click', () => next());
 };
 
+const customSelectHandler = () => {
+  const EL_paymentVariants = document.querySelector('.js-custom-select');
+  const EL_currentPaymentVariant = document.querySelector('.js-custom-select-variant');
+  const EL_selectItem = document.querySelectorAll('.js-select-item');
+  const EL_selectInput = document.querySelector('.js-custom-select-input');
+  const EL_searchInput = document.querySelector('.js-search input');
+
+  console.log('EL_selectInput', EL_selectInput);
+
+  if (EL_paymentVariants && EL_currentPaymentVariant) {
+    EL_paymentVariants.addEventListener('click', () => {
+      EL_paymentVariants.classList.contains('open')
+        ? EL_paymentVariants.classList.remove('open')
+        : EL_paymentVariants.classList.add('open');
+
+      EL_searchInput.focus();
+    });
+  }
+
+  if (EL_selectItem) {
+    EL_selectItem.forEach((element) => {
+      element.addEventListener('click', () => {
+        document.querySelectorAll('.custom-select__select-text').forEach((el) => el.classList.remove('selected'));
+        element.querySelector('.custom-select__select-text').classList.add('selected');
+
+        const currentValue = element.querySelector('.custom-select__select-text').textContent;
+
+        EL_selectInput.value = currentValue.trim();
+        EL_currentPaymentVariant.textContent = currentValue;
+      });
+    });
+  }
+};
+
 addEventListener('DOMContentLoaded', () => {
   openStepHandler();
   activeTab();
   counter();
   calendar();
+  customSelectHandler();
 });

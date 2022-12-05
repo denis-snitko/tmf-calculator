@@ -287,10 +287,13 @@
     <span>ШАГ 2 - Параметры груза</span>
     <button class="add-cargo">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 6V14C18 16.4 16.6667 18 13.5556 18H6.44444C3.33333 18 2 16.4 2 14V6C2 3.6 3.33333 2 6.44444 2H13.5556C16.6667 2 18 3.6 18 6Z" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M7 10H13" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        <path opacity="0.9" d="M10 13L10 7" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <path d="M18 6V14C18 16.4 16.6667 18 13.5556 18H6.44444C3.33333 18 2 16.4 2 14V6C2 3.6 3.33333 2 6.44444 2H13.5556C16.6667 2 18 3.6 18 6Z"
+              stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M7 10H13" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+              stroke-linejoin="round" />
+        <path opacity="0.9" d="M10 13L10 7" stroke="#EB0045" stroke-width="2" stroke-miterlimit="10"
+              stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
       Добавить груз
     </button>
   </div>
@@ -304,7 +307,7 @@
           Параметры одного места
           <div class="question">
             <div class="question__tooltip">
-              tooltip tooltip 
+              tooltip tooltip
             </div>
           </div>
         </label>
@@ -319,11 +322,13 @@
           </div>
         </label>
         <div class="second__counter js-counter">
-          <button type="button" class="second__counter-button base-button base-button--reverse js-button-minus">-</button>
+          <button type="button"
+                  class="second__counter-button base-button base-button--reverse js-button-minus">-</button>
           <div class="base-input second__base-input">
             <input type="text" for="input-34244" placeholder="0 шт" value="0 шт">
           </div>
-          <button type="button" class="second__counter-button base-button base-button--reverse js-button-plus">+</button>
+          <button type="button"
+                  class="second__counter-button base-button base-button--reverse js-button-plus">+</button>
         </div>
       </div>
       <div class="col-1_68">
@@ -354,15 +359,109 @@
       </div>
       <div class="col-3_85">
         <div class="steps__second-title">Описание груза</div>
-        <div class="second__textarea">
-          <div class="base-textarea">
-            <textarea name="textarea-111" for="input-101" placeholder="Ваш вариант груза"></textarea>
-            <label for="input-101">Ваш вариант груза</label>
+
+        <div class="custom-select second__custom-select js-custom-select">
+          <input type="text" name="selected-cargo" class="custom-select__input js-custom-select-input"
+                 value="Авто-кресла">
+          <div class="custom-select__selected flex items-center justify-between">
+            <div class="custom-select__title">
+              <span class="custom-select__current js-custom-select-variant">
+                Авто-кресла
+              </span>
+            </div>
+            <div class="custom-select__icon">
+              <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.02242 5.7256C5.02882 5.71953 5.03515 5.71335 5.04143 5.70708C5.43195 5.31655 5.43195 4.68339 5.04143 4.29286L1.9305 1.18193C1.53997 0.791407 0.906806 0.791407 0.516282 1.18193C0.125758 1.57246 0.125758 2.20562 0.516282 2.59614L2.91986 4.99973L0.515794 7.4038C0.125269 7.79432 0.125269 8.42749 0.515794 8.81801C0.906318 9.20854 1.53948 9.20854 1.93001 8.81801L5.02242 5.7256Z"
+                      fill="#EB0045"></path>
+              </svg>
+            </div>
           </div>
+
+          <div class="custom-select__select">
+            <div class="custom-select__select-content">
+
+              <div class="search second__search js-search">
+                <input type="text" class="search__input" placeholder="Поиск">
+                <button class="search__button">
+                  <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7.57895" cy="7.57895" r="6.57895" stroke="#A2AAB5" stroke-width="2" />
+                    <line x1="13.2038" y1="12.6316" x2="15.158" y2="14.5858" stroke="#A2AAB5" stroke-width="2"
+                          stroke-linecap="round" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text selected">
+                  Авто-кресла
+                </div>
+              </div>
+
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Автомобильные диски
+                </div>
+              </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Автомобильные капоты
+                </div>
+              </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Автозапчасти
+                </div>
+              </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Двигатели внутреннего сгорания
+                </div>
+              </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Автомобильные капоты
+                </div>
+              </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Колеса
+                </div>
+              </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Автомобильные капоты
+                </div>
+              </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Песок
+                </div>
+              </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Стройматериалы
+                </div>
+              </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Снег
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="second__textarea">
+        <div class="base-textarea">
+          <textarea name="textarea-111" for="input-101" placeholder="Ваш вариант груза"></textarea>
+          <label for="input-101">Ваш вариант груза</label>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
       <div class="step third white-block js-step">
   <div class="step__title">

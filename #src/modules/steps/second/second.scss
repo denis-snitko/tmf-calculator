@@ -54,7 +54,14 @@
         background-color: $base-red;
       }
     }
+  }
 
+  &__custom-select {
+    margin-top: 28px;
+  }
+
+  &__search {
+    margin-bottom: 30px;
   }
 
   @media (max-width: 576px) {
