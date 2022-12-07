@@ -184,9 +184,11 @@
 
           <button class="show-map">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10Z" stroke="#EB0045" stroke-width="2"/>
-              <path d="M3.19707 7.31455C4.79633 0.223027 15.2118 0.231216 16.803 7.32274C17.7365 11.4827 15.1712 15.0039 12.9225 17.1821C10 19.606 10 19.606 7.06939 17.1821C4.8288 15.0039 2.26349 11.4745 3.19707 7.31455Z" stroke="#EB0045" stroke-width="2"/>
-              </svg>              
+              <path d="M10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10Z"
+                    stroke="#EB0045" stroke-width="2" />
+              <path d="M3.19707 7.31455C4.79633 0.223027 15.2118 0.231216 16.803 7.32274C17.7365 11.4827 15.1712 15.0039 12.9225 17.1821C10 19.606 10 19.606 7.06939 17.1821C4.8288 15.0039 2.26349 11.4745 3.19707 7.31455Z"
+                    stroke="#EB0045" stroke-width="2" />
+            </svg>
             Посмотреть место на карте
           </button>
 
@@ -202,17 +204,17 @@
           </div>
         </div>
 
-                  
+
         <div class="calendar">
           <div class="calendar__header">
             <ul>
               <li class="calendar__prev js-calendar-prev">&#10094;</li>
-                <li class="calendar__month js-calendar-month"></li>
-                <li class="calendar__year js-calendar-year"></li>
+              <li class="calendar__month js-calendar-month"></li>
+              <li class="calendar__year js-calendar-year"></li>
               <li class="calendar__next js-calendar-next">&#10095;</li>
             </ul>
           </div>
-    
+
           <ul class="calendar__weekdays">
             <li>ПН</li>
             <li>ВТ</li>
@@ -222,40 +224,184 @@
             <li style="color: #EB0045;">СБ</li>
             <li style="color: #EB0045;">ВС</li>
           </ul>
-    
+
           <ul class="calendar__days js-calendar-days"></ul>
         </div>
 
         <div class="flex items-center justify-between">
-          <div class="base-input time">
-            <input type="text" for="input-456" placeholder="00:00">
+          <div class="base-input time js-time-selector">
+            <input type="text" for="input-456" placeholder="00:00" disabled>
             <label for="input-456">Время</label>
+
+            <div class="time__selector">
+              <div class="time__selector-input">
+                <div class="hours">
+                  <input class="hours__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button class="up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                    <button class="down">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                  </div>
+                </div>
+                <div class="minutes">
+                  <input class="minutes__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button class="up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                    <button class="down">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="time-divider">-</span>
-          <div class="base-input time">
-            <input type="text" for="input-456" placeholder="00:00">
+          <div class="base-input time js-time-selector">
+            <input type="text" for="input-456" placeholder="00:00" disabled>
+
+            <div class="time__selector">
+              <div class="time__selector-input">
+                <div class="hours">
+                  <input class="hours__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button class="up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                    <button class="down">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                  </div>
+                </div>
+                <div class="minutes">
+                  <input class="minutes__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button class="up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                    <button class="down">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
         <div class="flex items-center justify-between">
-          <div class="base-input time">
-            <input type="text" for="input-459" placeholder="00:00">
+          <div class="base-input time js-time-selector">
+            <input type="text" for="input-459" placeholder="00:00" disabled>
             <label for="input-459">Обед</label>
+
+            <div class="time__selector">
+              <div class="time__selector-input">
+                <div class="hours">
+                  <input class="hours__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button class="up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                    <button class="down">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                  </div>
+                </div>
+                <div class="minutes">
+                  <input class="minutes__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button class="up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                    <button class="down">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="time-divider">-</span>
-          <div class="base-input time">
-            <input type="text" for="input-459" placeholder="00:00">
+          <div class="base-input time js-time-selector">
+            <input type="text" for="input-459" placeholder="00:00" disabled>
+
+            <div class="time__selector">
+              <div class="time__selector-input">
+                <div class="hours">
+                  <input class="hours__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button class="up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                    <button class="down">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                  </div>
+                </div>
+                <div class="minutes">
+                  <input class="minutes__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button class="up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                    <button class="down">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-        
+
       </div>
     </div>
 
-      <div class="first__textarea">
-        <div class="base-textarea">
-          <textarea name="textarea-11" for="input-10" placeholder="Ваш комментарий"></textarea>
-          <label for="input-10">Ваш комментарий</label>
-        </div>
+    <div class="first__textarea">
+      <div class="base-textarea">
+        <textarea name="textarea-11" for="input-10" placeholder="Ваш комментарий"></textarea>
+        <label for="input-10">Ваш комментарий</label>
       </div>
+    </div>
   </div>
 </div>

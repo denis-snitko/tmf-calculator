@@ -255,7 +255,6 @@ h5 {
 body {
   padding: 50px 0;
   background-color: #f7f7ff;
-  border: 1px solid #000;
 }
 
 img {
@@ -951,30 +950,31 @@ img {
   border: 1px solid transparent;
   border-radius: 3px;
   color: #253746;
+  font-size: 1rem;
 }
 
 .base-input input::-webkit-input-placeholder {
-  font-size: 12px;
+  font-size: 1rem;
   color: #a2aab5;
 }
 
 .base-input input::-moz-placeholder {
-  font-size: 12px;
+  font-size: 1rem;
   color: #a2aab5;
 }
 
 .base-input input:-ms-input-placeholder {
-  font-size: 12px;
+  font-size: 1rem;
   color: #a2aab5;
 }
 
 .base-input input::-ms-input-placeholder {
-  font-size: 12px;
+  font-size: 1rem;
   color: #a2aab5;
 }
 
 .base-input input::placeholder {
-  font-size: 12px;
+  font-size: 1rem;
   color: #a2aab5;
 }
 
@@ -1046,8 +1046,126 @@ img {
 }
 
 .base-input.time {
+  position: relative;
   max-width: 113px;
   width: 100%;
+}
+
+.base-input.time input {
+  text-align: center;
+  cursor: text;
+}
+
+.base-input.time.active .time__selector {
+  display: block;
+}
+
+.time__selector {
+  display: none;
+  position: absolute;
+  bottom: -45px;
+  right: 0;
+  z-index: 1;
+  width: 208px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 30px rgba(162, 170, 181, 0.2);
+          box-shadow: 0px 4px 30px rgba(162, 170, 181, 0.2);
+  border-radius: 2px;
+}
+
+.time__selector-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.time__selector-input-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.time__selector-input-buttons .up,
+.time__selector-input-buttons .down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 22px;
+  height: 22px;
+  background-color: #253746;
+  border: none;
+  border-radius: 2px;
+}
+
+.time__selector-input-buttons .up:hover,
+.time__selector-input-buttons .down:hover {
+  background-color: #344d63;
+}
+
+.time__selector-input-buttons .up {
+  margin-bottom: 2px;
+}
+
+.time__selector-input .hours,
+.time__selector-input .minutes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+
+.time__selector-input .hours__input,
+.time__selector-input .minutes__input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: #253746;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.time__selector-input .hours__input[type='number']::-webkit-outer-spin-button,
+.time__selector-input .hours__input[type='number']::-webkit-inner-spin-button,
+.time__selector-input .minutes__input[type='number']::-webkit-outer-spin-button,
+.time__selector-input .minutes__input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.time__selector-input .hours__input[type='number'],
+.time__selector-input .hours__input[type='number']:hover,
+.time__selector-input .hours__input[type='number']:focus,
+.time__selector-input .minutes__input[type='number'],
+.time__selector-input .minutes__input[type='number']:hover,
+.time__selector-input .minutes__input[type='number']:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
 }
 
 .time-divider {

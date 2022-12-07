@@ -158,8 +158,6 @@ const customSelectHandler = () => {
   const EL_selectInput = document.querySelector('.js-custom-select-input');
   const EL_searchInput = document.querySelector('.js-search input');
 
-  console.log('EL_selectInput', EL_selectInput);
-
   if (EL_paymentVariants && EL_currentPaymentVariant) {
     EL_paymentVariants.addEventListener('click', () => {
       EL_paymentVariants.classList.contains('open')
@@ -185,10 +183,53 @@ const customSelectHandler = () => {
   }
 };
 
+const timeSelectorHandler = () => {
+  const EL_timeSelectors = document.querySelectorAll('.js-time-selector');
+
+  if (!EL_timeSelectors) return;
+
+  EL_timeSelectors.forEach((element) => {
+    element.addEventListener('click', (event) => {
+      console.dir(event.currentTarget);
+
+      const child = element.querySelector('.time__selector');
+
+      if (child.style.display === 'none' || child.style.display === '') {
+        child.style.display = 'block';
+      } else {
+        child.style.display = 'none';
+        // EL_timeSelectors.forEach((el) => el.classList.remove('active'));
+      }
+
+      child.querySelector('.up').addEventListener('click', () => {
+        child.style.display = 'block';
+        console.log('', 1);
+      });
+    });
+  });
+};
+
+// const formSubmitHandler = () => {
+//   const mainFrom = document.querySelector('.js-main-form');
+
+//   if (!mainFrom) return;
+
+//   mainFrom.addEventListener('submit', (event) => {
+//     event.preventDefault();
+
+//     const data = Object.fromEntries(new FormData(mainFrom));
+
+//     console.log('data', data);
+//   });
+// };
+
 addEventListener('DOMContentLoaded', () => {
   openStepHandler();
   activeTab();
   counter();
   calendar();
   customSelectHandler();
+  timeSelectorHandler();
+
+  // formSubmitHandler();
 });
