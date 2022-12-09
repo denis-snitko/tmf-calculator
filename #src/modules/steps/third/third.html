@@ -15,15 +15,18 @@
       <div class="col-4_82">
         <div class="steps__second-title flex items-center justify-between">
           Отправитель
-          <label class="custom-radio" for="for-581">
-            <input class="custom-radio--hidden" id="for-581" type="radio" name="step-581" value="step-581">
+          <label class="custom-radio" for="for-58112">
+            <div class="steps__second-title-error js-payer-error">
+              Выбрать плательщика
+            </div>
+            <input class="custom-radio--hidden js-check-payer" id="for-58112" type="radio" name="step-58112" value="step-58112">
             <div class="custom-radio__pseudo"></div>
             Плательщик
           </label>
         </div>
         <div class="tabs">
-          <input class="tabs__input" id="tab-5" type="radio" name="name-3" checked>
-          <input class="tabs__input" id="tab-6" type="radio" name="name-3">
+          <input class="tabs__input" id="tab-5" type="radio" name="stepThreePerson" value="individualArrival" checked>
+          <input class="tabs__input" id="tab-6" type="radio" name="stepThreePerson" value="legalArrival">
 
           <div class="tabs__label-wrapper flex">
             <label class="tabs__label js-tabs-label active" id="label-5" for="tab-5">Физическое лицо</label>
@@ -31,70 +34,70 @@
           </div>
 
 
-          <div class="tabs__content" id="content-5">
+          <div class="tabs__content js-step-content" id="content-5" data-name="individualArrival" data-step="step_3">
             <div class="base-input">
-              <input type="text" for="input-10" placeholder="ФИО">
+              <input type="text" for="input-10" placeholder="ФИО"  name="individualArrivalName" data-required>
               <label for="input-10">ФИО</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-20" placeholder="Номер телефона">
+              <input type="text" for="input-20" placeholder="Номер телефона" name="individualArrivalPhone" data-required>
               <label for="input-20">Номер телефона</label>
             </div>
             <div class="h5">Паспортные данные</div>
             <div class="flex">
               <div class="base-input country">
-                <input type="text" for="input-101" placeholder="Страна регистрации">
+                <input type="text" for="input-101" placeholder="Страна регистрации" name="individualArrivalRegCountry" data-required>
                 <label for="input-101">Страна регистрации</label>
               </div>
               <div class="base-input series">
-                <input type="text" for="input-102" placeholder="Серия">
+                <input type="text" for="input-102" placeholder="Серия" name="individualArrivalPassportSeries" data-required>
                 <label for="input-102">Серия</label>
               </div>
               <div class="base-input">
-                <input type="text" for="input-103" placeholder="Номер">
+                <input type="text" for="input-103" placeholder="Номер" name="individualArrivalPassportNumber" data-required>
                 <label for="input-103">Номер</label>
               </div>
             </div>
             <div class="flex justify-between">
               <div class="base-input identification">
-                <input type="text" for="input-112" placeholder="Идентификационный номер">
+                <input type="text" for="input-112" placeholder="Идентификационный номер"  name="individualArrivalPassportIdn" data-required>
                 <label for="input-112">Идентификационный номер</label>
               </div>
               <div class="base-input date">
-                <input type="text" for="input-113" placeholder="Дата">
+                <input type="text" for="input-113" placeholder="Дата" name="individualArrivalPassportDate" data-required>
                 <label for="input-113">Дата</label>
               </div>
             </div>
             <div class="base-input">
-              <input type="text" for="input-30" placeholder="Адрес прописки">
+              <input type="text" for="input-30" placeholder="Адрес прописки" name="individualArrivalPassportResidency" data-required>
               <label for="input-30">Адрес прописки</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-40" placeholder="Кем выдан">
+              <input type="text" for="input-40" placeholder="Кем выдан" name="individualArrivalPassportIssued" data-required>
               <label for="input-40">Кем выдан</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-40" placeholder="ID-паспорт, вид на жительство">
+              <input type="text" for="input-40" placeholder="ID-паспорт, вид на жительство"  name="individualArrivalPassportAsID">
               <label for="input-40">ID-паспорт, вид на жительство</label>
             </div>
           </div>
 
-          <div class="tabs__content" id="content-6">
+          <div class="tabs__content js-step-content" data-step="step_3" id="content-6"  data-name="legalArrival">
             <div class="base-input">
-              <input type="text" for="input-1" placeholder="Организация или ИП">
+              <input type="text" for="input-1" placeholder="Организация или ИП" name="legalArrivalName" data-required>
               <label for="input-1">Организация или ИП</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-2" placeholder="УНП">
+              <input type="text" for="input-2" placeholder="УНП"  name="legalArrivalUNP" data-required>
               <label for="input-2">УНП</label>
             </div>
             <div class="h5">Контактные данные</div>
             <div class="base-input">
-              <input type="text" for="input-3" placeholder="Контактное лицо">
+              <input type="text" for="input-3" placeholder="Контактное лицо" name="legalArrivalManager" data-required>
               <label for="input-3">Контактное лицо</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-4" placeholder="Номер телефона">
+              <input type="text" for="input-4" placeholder="Номер телефона" name="legalArrivalPhone" data-required>
               <label for="input-4">Номер телефона</label>
             </div>
           </div>
@@ -103,81 +106,82 @@
       <div class="col-4_25">
         <div class="steps__second-title  flex items-center justify-between">
           Адрес
-          <label class="custom-radio" for="for-681">
-            <input class="custom-radio--hidden" id="for-681" type="radio" name="step-681" value="step-581">
+          <label class="custom-radio" for="for-68112">
+            <input class="custom-radio--hidden" id="for-68112" type="radio" name="step-68112" value="step-581">
             <div class="custom-radio__pseudo"></div>
             Координаты
           </label>
         </div>
         <div class="tabs">
-          <input class="tabs__input" id="tab-7" type="radio" name="name-4" checked>
-          <input class="tabs__input" id="tab-8" type="radio" name="name-4">
+          <input class="tabs__input" id="tab-7" type="radio" name="stepThirdAddress" value="takeFromMeArrival" checked>
+          <input class="tabs__input" id="tab-8" type="radio" name="stepThirdAddress" value="bringMySelfArrival">
 
           <div class="tabs__label-wrapper flex">
             <label class="tabs__label js-tabs-label active" id="label-7" for="tab-7">Забрать у меня</label>
-            <label class="tabs__label js-tabs-label" id="label-8" for="tab-8">Привезу сам
-              -15%</label>
+            <label class="tabs__label js-tabs-label" id="label-8" for="tab-8">
+              Привезу сам -15%
+            </label>
           </div>
 
 
-          <div class="tabs__content" id="content-7">
+          <div class="tabs__content js-step-content" data-step="step_3" id="content-7" data-name="takeFromMeArrival" data-step="step_3">
             <div class="base-input">
-              <input type="text" for="input-1122" placeholder="Город">
+              <input type="text" for="input-1122" placeholder="Город" name="takeFromMeArrivalCity" data-required>
               <label for="input-1122">Город</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-1123" placeholder="Улица">
+              <input type="text" for="input-1123" placeholder="Улица" name="takeFromMeArrivalStreet" data-required>
               <label for="input-1123">Улица</label>
             </div>
             <div class="flex justify-between">
               <div class="base-input half">
-                <input type="text" for="input-1011" placeholder="Дом">
+                <input type="text" for="input-1011" placeholder="Дом" name="takeFromMeArrivalHome" data-required>
                 <label for="input-1011">Дом</label>
               </div>
               <div class="base-input half">
-                <input type="text" for="input-10211" placeholder="Кв/офис">
+                <input type="text" for="input-10211" placeholder="Кв/офис" name="takeFromMeArrivalApartment" data-required>
                 <label for="input-10211">Кв/офис</label>
               </div>
             </div>
             <div class="flex justify-between">
               <div class="base-input half">
-                <input type="text" for="input-11211" placeholder="Корпус">
+                <input type="text" for="input-11211" placeholder="Корпус" name="takeFromMeArrivalWing">
                 <label for="input-11211">Корпус</label>
               </div>
               <div class="base-input half">
-                <input type="text" for="input-11311" placeholder="Этаж">
+                <input type="text" for="input-11311" placeholder="Этаж" name="takeFromMeArrivalFloor">
                 <label for="input-11311">Этаж</label>
               </div>
             </div>
           </div>
 
-          <div class="tabs__content" id="content-8">
+          <div class="tabs__content js-step-content" data-step="step_3" id="content-8" data-name="bringMySelfArrival" data-step="step_3">
             <div class="base-input">
-              <input type="text" for="input-1122" placeholder="Город">
-              <label for="input-1122">Город</label>
+              <input type="text" for="input-112234" placeholder="Город" name="bringMySelfArrivalCity" data-required>
+              <label for="input-112234">Город</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-1123" placeholder="Улица">
-              <label for="input-1123">Улица</label>
+              <input type="text" for="input-112334" placeholder="Улица" name="bringMySelfArrivalStreet" data-required>
+              <label for="input-112334">Улица</label>
             </div>
             <div class="flex justify-between">
               <div class="base-input half">
-                <input type="text" for="input-1011" placeholder="Дом">
-                <label for="input-1011">Дом</label>
+                <input type="text" for="input-101134" placeholder="Дом" name="bringMySelfArrivalHome" data-required>
+                <label for="input-101134">Дом</label>
               </div>
               <div class="base-input half">
-                <input type="text" for="input-10211" placeholder="Кв/офис">
-                <label for="input-10211">Кв/офис</label>
+                <input type="text" for="input-1021134" placeholder="Кв/офис" name="bringMySelfArrivalApartment" data-required>
+                <label for="input-1021134">Кв/офис</label>
               </div>
             </div>
             <div class="flex justify-between">
               <div class="base-input half">
-                <input type="text" for="input-11211" placeholder="Корпус">
-                <label for="input-11211">Корпус</label>
+                <input type="text" for="input-1121134" placeholder="Корпус" name="bringMySelfArrivalWing">
+                <label for="input-1121134">Корпус</label>
               </div>
               <div class="base-input half">
-                <input type="text" for="input-11311" placeholder="Этаж">
-                <label for="input-11311">Этаж</label>
+                <input type="text" for="input-1131134" placeholder="Этаж" name="bringMySelfArrivalFloor">
+                <label for="input-1131134">Этаж</label>
               </div>
             </div>
           </div>
@@ -229,7 +233,7 @@
 
       <div class="first__textarea">
         <div class="base-textarea">
-          <textarea name="textarea-11" for="input-10" placeholder="Ваш комментарий"></textarea>
+          <textarea name="step-3-comment" for="input-10" placeholder="Ваш комментарий"></textarea>
           <label for="input-10">Ваш комментарий</label>
         </div>
       </div>

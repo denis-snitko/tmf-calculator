@@ -29,6 +29,31 @@ const activeTab = () => {
   }
 };
 
+const openModal = () => {
+  const EL_openModal = document.querySelectorAll('[data=js-open-modal]');
+  const EL_closeModalBtn = document.querySelectorAll('[data=js-close-modal]');
+
+  if (EL_openModal && EL_closeModalBtn) {
+    EL_openModal.forEach((modal) => {
+      modal.addEventListener('click', () => {
+        const { forModal } = modal.dataset;
+
+        document.body.style.overflow = 'hidden';
+        document.querySelector(`[data-modal-name="${forModal}"]`).style.display = 'flex';
+      });
+    });
+
+    EL_closeModalBtn.forEach((button) => {
+      button.addEventListener('click', () => {
+        const { forModal } = button.dataset;
+
+        document.body.style.overflow = 'auto';
+        document.querySelector(`[data-modal-name="${forModal}"]`).style.display = 'none';
+      });
+    });
+  }
+};
+
 const counter = () => {
   const EL_counter = document.querySelector('.js-counter');
   const EL_input = document.querySelector('.js-counter input');
@@ -51,6 +76,7 @@ const counter = () => {
   });
 };
 
+let selectedDate = '';
 const calendar = () => {
   const today = new Date();
   let dayInt = today.getDate();
@@ -74,6 +100,8 @@ const calendar = () => {
     'Декабрь',
   ];
 
+  selectedDate = `${dayInt} ${months[month]} ${year}`;
+
   const nextBtn = document.querySelector('.js-calendar-next');
   const prevBtn = document.querySelector('.js-calendar-prev');
 
@@ -86,7 +114,7 @@ const calendar = () => {
     let showMonth = event.getAttribute('data-month');
     let showDay = event.getAttribute('data-day');
 
-    console.log(`${showDay} ${months[showMonth]} ${showYear}`);
+    selectedDate = `${showDay} ${months[showMonth]} ${showYear}`;
   };
 
   const daysInMonth = (month, year) => {
@@ -189,39 +217,302 @@ const timeSelectorHandler = () => {
   if (!EL_timeSelectors) return;
 
   EL_timeSelectors.forEach((element) => {
-    element.addEventListener('click', (event) => {
-      console.dir(event.currentTarget);
-
-      const child = element.querySelector('.time__selector');
-
-      if (child.style.display === 'none' || child.style.display === '') {
-        child.style.display = 'block';
+    element.addEventListener('click', () => {
+      if (!element.classList.contains('active')) {
+        EL_timeSelectors.forEach((el) => el.classList.remove('active'));
+        element.classList.add('active');
       } else {
-        child.style.display = 'none';
-        // EL_timeSelectors.forEach((el) => el.classList.remove('active'));
+        element.classList.remove('active');
       }
+    });
 
-      child.querySelector('.up').addEventListener('click', () => {
-        child.style.display = 'block';
-        console.log('', 1);
+    const EL_selector = element.querySelectorAll('.time__selector');
+    EL_selector.forEach((selector) => {
+      selector.addEventListener('click', (event) => {
+        event.stopPropagation();
+
+        let hour = selector.querySelector('.hours__input');
+        if (
+          event.target.classList.contains('js-hour-up') ||
+          event.target.tagName === 'svg' ||
+          event.target.tagName === 'path'
+        ) {
+          if (hour.value < 23) {
+            hour.value++;
+          } else {
+            hour.value = 0;
+          }
+        }
+
+        if (
+          event.target.classList.contains('js-hour-down') ||
+          event.target.tagName === 'svg' ||
+          event.target.tagName === 'path'
+        ) {
+          if (hour.value <= 0) {
+            hour.value = 0;
+          } else {
+            hour.value--;
+          }
+        }
+
+        let minutes = selector.querySelector('.minutes__input');
+        if (
+          event.target.classList.contains('js-minutes-up') ||
+          event.target.tagName === 'svg' ||
+          event.target.tagName === 'path'
+        ) {
+          if (minutes.value < 50) {
+            minutes.value = Number(minutes.value) + 10;
+          } else {
+            minutes.value = 0;
+          }
+        }
+
+        if (
+          event.target.classList.contains('js-minutes-down') ||
+          event.target.tagName === 'svg' ||
+          event.target.tagName === 'path'
+        ) {
+          if (minutes.value <= 0) {
+            minutes.value = 0;
+          } else {
+            minutes.value = Number(minutes.value) - 10;
+          }
+        }
+        element.querySelector('input').value = `${hour.value || '00'}:${minutes.value || '00'}`;
       });
     });
   });
 };
 
-// const formSubmitHandler = () => {
-//   const mainFrom = document.querySelector('.js-main-form');
+const checkPayer = () => {
+  const EL_radio = document.querySelectorAll('.js-check-payer');
 
-//   if (!mainFrom) return;
+  EL_radio.forEach((el) => {
+    if (el.checked) {
+      el.previousElementSibling.style.display = 'none';
+    } else {
+      el.previousElementSibling.style.display = 'block';
+    }
+  });
+};
 
-//   mainFrom.addEventListener('submit', (event) => {
-//     event.preventDefault();
+// for step_2
+const step_2_Handler = () => {
+  const content = document.querySelectorAll('.js-step-2-content');
 
-//     const data = Object.fromEntries(new FormData(mainFrom));
+  if (!content) return;
 
-//     console.log('data', data);
-//   });
-// };
+  const data = {
+    shipments: [],
+  };
+  let values = {};
+
+  content.forEach((shipment) => {
+    const inputs = shipment.querySelectorAll('input[data-step-2]');
+
+    inputs.forEach((input) => {
+      values = {
+        ...values,
+        [input.name]: input.value,
+        description: shipment.querySelector('.js-custom-select-variant').textContent,
+        comment: shipment.querySelector('textarea[name="shipmentVariant"]').value,
+      };
+    });
+
+    data.shipments.push(values);
+  });
+
+  return data;
+};
+
+// for step_4
+const selectingServiceHandler = () => {
+  let step_4 = '';
+  const selectingService = document.querySelectorAll('.js-selecting-service');
+
+  if (!selectingService) return;
+
+  selectingService.forEach((service) => {
+    if (service.querySelector('input').checked) {
+      step_4 = service.querySelector('input').value;
+    }
+  });
+
+  return step_4;
+};
+
+// for step_5
+const additionalSelectedServiceHandler = () => {
+  const additionalSelectingService = document.querySelectorAll('.js-additional-selected-service');
+
+  if (!additionalSelectingService) return;
+  let step_5 = {};
+
+  additionalSelectingService.forEach((service) => {
+    const name = service.querySelector('input').name;
+    let inputs = service.querySelectorAll(`input[name="${name}"]`);
+
+    const values = [];
+
+    inputs.forEach((input) => {
+      if (input.checked) {
+        values.push(input.value);
+      }
+    });
+
+    step_5 = {
+      ...step_5,
+      [name]: values,
+    };
+  });
+
+  return step_5;
+};
+
+// Функция проверки поля на пустоту
+const emptyField = (field) => (field === '' ? true : false);
+
+// Функция обновления DOM если есть ошибки
+const showError = (fields) => {
+  fields.forEach((element) => {
+    const input = document.querySelector(`[name='${element.name}']`);
+
+    const currentLabelText = input.placeholder;
+
+    if (emptyField(element.value)) {
+      input.style.borderColor = '#EB0045';
+
+      input.nextElementSibling.textContent = 'Заполнить';
+      input.nextElementSibling.style.color = '#EB0045';
+      input.nextElementSibling.style.visibility = 'visible';
+    } else {
+      input.style.borderColor = 'transparent';
+
+      input.nextElementSibling.textContent = currentLabelText;
+      input.nextElementSibling.removeAttribute('style');
+    }
+  });
+
+  return;
+};
+
+// Отдельная проверка времени доставки и обеда
+const emptyTime = () => {
+  const timeInputs = document.querySelectorAll('.js-time-selector > input');
+
+  showError(timeInputs);
+};
+
+const formSubmitHandler = () => {
+  const mainFrom = document.querySelector('.js-main-form');
+
+  if (!mainFrom) return;
+
+  mainFrom.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const inputs = mainFrom.querySelectorAll('[data-required]');
+
+    showError(inputs);
+    emptyTime();
+    checkPayer();
+
+    // -------------------------------
+
+    // Функция получения значений из полей
+    const getFieldsData = (fields) => {
+      let dataStep_1 = {};
+      let dataStep_3 = {};
+
+      const resultData = {};
+
+      fields.forEach((input) => {
+        const currentStep = input.closest('.js-step-content').dataset.step;
+        const currentName = input.closest('.js-step-content').dataset.name;
+        const currentTab = mainFrom.querySelector(`[value="${currentName}"]`)?.checked;
+
+        if (currentTab && currentStep === 'step_1') {
+          dataStep_1 = {
+            ...dataStep_1,
+            [currentName]: {
+              ...dataStep_1[currentName],
+              [input.name]: input.value,
+            },
+          };
+        }
+
+        if (currentTab && currentStep === 'step_3') {
+          dataStep_3 = {
+            ...dataStep_3,
+            [currentName]: {
+              ...dataStep_3[currentName],
+              [input.name]: input.value,
+            },
+          };
+        }
+      });
+
+      const getComments = (element) => {
+        const textarea = document.querySelector(element);
+        return textarea.value;
+      };
+
+      resultData.step_1 = dataStep_1;
+      resultData.step_1.selectedDate = selectedDate;
+      resultData.step_1.comment = getComments('textarea[name="step-1-comment"]');
+      resultData.step_2 = step_2_Handler();
+      resultData.step_3 = dataStep_3;
+      resultData.step_3.comment = getComments('textarea[name="step-3-comment"]');
+      resultData.step_4 = selectingServiceHandler();
+      resultData.step_5 = additionalSelectedServiceHandler();
+
+      console.log('resultData', resultData);
+
+      return resultData;
+    };
+
+    // Функция отправки данных на сервер
+    const fetchData = async (fetchedData) => {
+      const tabs = mainFrom.querySelectorAll(`.tabs__input`);
+      const arrayTabs = Array.from(tabs);
+
+      let preparedData = [];
+
+      arrayTabs.forEach((input) => {
+        if (input.checked) {
+          preparedData = [...preparedData, input.value];
+        }
+      });
+
+      const data = {
+        ...fetchedData,
+        selectedTabs: preparedData,
+      };
+
+      try {
+        const url = '/';
+        const config = {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        };
+
+        const response = await fetch(url, config);
+
+        const json = await response.json();
+      } catch (error) {
+        console.log('error', error);
+      }
+    };
+
+    fetchData(getFieldsData(inputs));
+  });
+};
 
 addEventListener('DOMContentLoaded', () => {
   openStepHandler();
@@ -230,6 +521,7 @@ addEventListener('DOMContentLoaded', () => {
   calendar();
   customSelectHandler();
   timeSelectorHandler();
+  openModal();
 
-  // formSubmitHandler();
+  formSubmitHandler();
 });

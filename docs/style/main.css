@@ -424,12 +424,22 @@ img {
 }
 
 .steps__second-title {
+  position: relative;
   padding-bottom: 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: #EB0045;
   border-bottom: 2px solid #EB0045;
+}
+
+.steps__second-title-error {
+  position: absolute;
+  top: -23px;
+  right: 0;
+  display: none;
+  font-size: 0.75rem;
+  color: #EB0045;
 }
 
 .steps__footer {
@@ -784,6 +794,72 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal__body {
+  position: relative;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.modal__content {
+  padding: 50px 40px;
+}
+
+.modal__title {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.modal__close {
+  position: absolute;
+  right: -38px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  background-color: #253746;
+  border-radius: 2px;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.modal__close:hover {
+  background-color: #2e4457;
 }
 
 /* End Base styles */
@@ -1771,6 +1847,19 @@ img {
 
   .add-cargo {
     top: -17px;
+  }
+
+  .modal {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .modal__content {
+    padding: 20px;
   }
 
   .second {
