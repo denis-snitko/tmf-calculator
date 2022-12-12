@@ -13,6 +13,7 @@ const openStepHandler = () => {
 };
 
 const activeTab = () => {
+  // ! НАЧАТЬ ТУТ. ПРИ ПЕРЕКЛЮЧЕНИИ ТАБОВ ДОБАВЛЯТЬ/УДАЛЯТЬ - data-required
   const EL_tabs = document.querySelectorAll('.tabs__input');
 
   if (EL_tabs) {

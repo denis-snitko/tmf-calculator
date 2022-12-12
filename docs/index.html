@@ -1034,51 +1034,213 @@
   <button data="js-open-modal" data-for-modal="confirm">open modal - confirm</button>
   <button data="js-open-modal" data-for-modal="success">open modal - success</button>
 
-  <div class="modal" data="js-modal" data-modal-name="check">
-    <div class="modal__body">
-      <button class="modal__close" data="js-close-modal" data-for-modal="check">
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="8.63611" y1="21.364" x2="21.364" y2="8.63603" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-          <line x1="21.364" y1="21.364" x2="8.63606" y2="8.63605" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-        </svg>
-      </button>
-      <div class="modal__content">
-        <div class="modal__title">Подтверждение услуг</div>
+  <div class="modal modal--check" data="js-modal" data-modal-name="check">
+  <div class="modal__body">
+    <button class="modal__close" data="js-close-modal" data-for-modal="check">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8.63611" y1="21.364" x2="21.364" y2="8.63603" stroke="white" stroke-width="2"
+              stroke-linecap="round" />
+        <line x1="21.364" y1="21.364" x2="8.63606" y2="8.63605" stroke="white" stroke-width="2"
+              stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="modal__content">
+      <div class="modal__title">Подтверждение услуг</div>
+      <div class="row-flex">
+        <div class="col-6 white-block">
+          <div class="steps__second-title flex items-center justify-between">
+            Отправитель
+            <span>Плательщик</span>
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">Организация или ИП</div>
+            <div class="modal__small-text">Березка, ООО или Якусь Ю.И., ИП</div>
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">УНП</div>
+            <div class="modal__small-text">45678234</div>
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">Адрес</div>
+            <div class="modal__small-text">г. Борисов, ул. Чапаева, д.16, кв. 23</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="modal__small-content">
+              <div class="modal__small-title">Дата</div>
+              <div class="modal__small-text">23.08.2022</div>
+            </div>
+            <div class="modal__small-content">
+              <div class="modal__small-title">Время</div>
+              <div class="modal__small-text">09:00-18:00</div>
+            </div>
+            <div class="modal__small-content">
+              <div class="modal__small-title">Обед</div>
+              <div class="modal__small-text">13:00-13:30</div>
+            </div>
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">Комментарий</div>
+            <div class="modal__small-text">Текст комментария к заявке Lorem Ipsum является текст-заполнитель обычно
+              используется в графических.</div>
+          </div>
+        </div>
+
+        <div class="col-6 white-block">
+          <div class="steps__second-title flex items-center justify-between">
+            Получатель
+            <!-- <span>Плательщик</span> -->
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">ФИО</div>
+            <div class="modal__small-text">Петров Иван Юрьевич </div>
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">Номер телефона</div>
+            <div class="modal__small-text">+375 (29) 767 - 98 - 78</div>
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">Адрес</div>
+            <div class="modal__small-text">г. Минск, ул. Грушевская, д.15-1, кв. 198</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="modal__small-content">
+              <div class="modal__small-title">Дата</div>
+              <div class="modal__small-text">23.08.2022</div>
+            </div>
+            <div class="modal__small-content">
+              <div class="modal__small-title">Время</div>
+              <div class="modal__small-text">09:00-18:00</div>
+            </div>
+            <div class="modal__small-content">
+              <div class="modal__small-title">Обед</div>
+              <div class="modal__small-text">13:00-13:30</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="white-block">
+        <div class="steps__second-title">Груз</div>
+        <div class="flex justify-between">
+          <div class="modal__small-content">
+            <div class="modal__small-title">Количество мест</div>
+            <div class="modal__small-text">1 место</div>
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">Вес</div>
+            <div class="modal__small-text">2 кг</div>
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">Габариты</div>
+            <div class="modal__small-text">0,4м х 0,4м х 0,3м</div>
+          </div>
+          <div class="modal__small-content">
+            <div class="modal__small-title">Объем</div>
+            <div class="modal__small-text">2 м2</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="white-block">
+        <div class="steps__second-title">Услуги</div>
+        <div class="modal__small-content">
+          <div class="modal__small-title">Услуга</div>
+          <div class="modal__small-text">Курьерские отправления, Перевозка без ТТН</div>
+        </div>
+        <div class="modal__small-content">
+          <div class="modal__small-title">Дополнительные услуги</div>
+          <div class="modal__small-text">Погрузка силами водителя, Доп. точка – доставка документов (в пределах города)</div>
+        </div>
+
+      </div>
+      <div class="white-block">
+        <div class="steps__footer">
+          <div class="steps__footer-arrival">
+            <span class="bold">Прибытие груза:</span>
+            <span class="date">04.08.2022</span>
+          </div>
+          <div class="steps__footer-price">
+            <span class="bold">Стоимость:</span>
+            <span class="sum">30,50 руб</span>
+          </div>
+          <div class="steps__footer-button">
+            <button class="base-button">Оформить заявку</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="modal" data="js-modal" data-modal-name="confirm">
-    <div class="modal__body">
-      <button class="modal__close" data="js-close-modal" data-for-modal="confirm">
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="8.63611" y1="21.364" x2="21.364" y2="8.63603" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-          <line x1="21.364" y1="21.364" x2="8.63606" y2="8.63605" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-        </svg>
-      </button>
-      <div class="modal__content">
-        <div class="modal__title">КОНТАКТЫ ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ</div>
+</div>
+  <div class="modal modal--confirm" data="js-modal" data-modal-name="confirm">
+  <div class="modal__body">
+    <button class="modal__close" data="js-close-modal" data-for-modal="confirm">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8.63611" y1="21.364" x2="21.364" y2="8.63603" stroke="white" stroke-width="2"
+              stroke-linecap="round" />
+        <line x1="21.364" y1="21.364" x2="8.63606" y2="8.63605" stroke="white" stroke-width="2"
+              stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="modal__content">
+      <div class="modal__title">КОНТАКТЫ ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ</div>
+      <div class="base-input">
+        <input type="text" for="input-434" placeholder="ФИО" name="modalName">
+        <label for="input-434">ФИО</label>
+      </div>
+      <div class="base-input">
+        <input type="text" for="input-4343" placeholder="Номер телефона" name="modalPhone">
+        <label for="input-4343">Номер телефона</label>
+      </div>
+      <div class="base-input">
+        <input type="text" for="input-4344" placeholder="E-mail" name="modalEmail">
+        <label for="input-4344">E-mail</label>
+      </div>
+      <div class="modal__base-input-description">
+        На почту придет заявка и статус по ее обработке. С вами свяжется менеджер.
+      </div>
+      <label class="custom-checkbox fifth__custom-checkbox" for="for-517">
+        <input class="custom-checkbox--hidden" id="for-517" type="checkbox" name="" value="" checked>
+        <div class="custom-checkbox__pseudo"></div>
+        С информацией в заявке согласен
+      </label>
+      <label class="custom-checkbox fifth__custom-checkbox" for="for-516">
+        <input class="custom-checkbox--hidden" id="for-516" type="checkbox" name="" value="">
+        <div class="custom-checkbox__pseudo"></div>
+        <span>
+          С политикой обработки персональных данных ознакомлен
+          <a href="#">https://goo/su/sdfghjk/</a>
+        </span>
+      </label>
+      <label class="custom-checkbox fifth__custom-checkbox" for="for-515">
+        <input class="custom-checkbox--hidden" id="for-515" type="checkbox" name="" value="">
+        <div class="custom-checkbox__pseudo"></div>
+        <span>
+          С правилами перевозки ознакомлен
+          <a href="#">https://goo/su/sdfghjk/</a>
+        </span>
+      </label>
+      <div class="flex items-center direction-column">
+        <button class="base-button">Оформить заявку</button>
+        <span class="error">Чтобы продолжить, требуется ваше согласие</span>
       </div>
     </div>
   </div>
-  <div class="modal" data="js-modal" data-modal-name="success">
-    <div class="modal__body">
-      <button class="modal__close" data="js-close-modal" data-for-modal="success">
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="8.63611" y1="21.364" x2="21.364" y2="8.63603" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-          <line x1="21.364" y1="21.364" x2="8.63606" y2="8.63605" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-        </svg>
-      </button>
-      <div class="modal__content">
-        <div class="modal__title">Заявка принята</div>
-      </div>
+</div>
+  <div class="modal modal--success" data="js-modal" data-modal-name="success">
+  <div class="modal__body">
+    <button class="modal__close" data="js-close-modal" data-for-modal="success">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8.63611" y1="21.364" x2="21.364" y2="8.63603" stroke="white" stroke-width="2"
+              stroke-linecap="round" />
+        <line x1="21.364" y1="21.364" x2="8.63606" y2="8.63605" stroke="white" stroke-width="2"
+              stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="modal__content">
+      <div class="modal__title">Заявка принята</div>
+      <p>На почту придет заявка и статус по ее обработке. В ближайшее время с вами свяжется менеджер для подтверждения заявки.</p>
     </div>
   </div>
+</div>
 
   <script src="./js/vendors.js"></script>
   <script src="./js/main.js"></script>

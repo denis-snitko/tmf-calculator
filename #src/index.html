@@ -40,51 +40,9 @@
   <button data="js-open-modal" data-for-modal="confirm">open modal - confirm</button>
   <button data="js-open-modal" data-for-modal="success">open modal - success</button>
 
-  <div class="modal" data="js-modal" data-modal-name="check">
-    <div class="modal__body">
-      <button class="modal__close" data="js-close-modal" data-for-modal="check">
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="8.63611" y1="21.364" x2="21.364" y2="8.63603" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-          <line x1="21.364" y1="21.364" x2="8.63606" y2="8.63605" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-        </svg>
-      </button>
-      <div class="modal__content">
-        <div class="modal__title">Подтверждение услуг</div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" data="js-modal" data-modal-name="confirm">
-    <div class="modal__body">
-      <button class="modal__close" data="js-close-modal" data-for-modal="confirm">
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="8.63611" y1="21.364" x2="21.364" y2="8.63603" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-          <line x1="21.364" y1="21.364" x2="8.63606" y2="8.63605" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-        </svg>
-      </button>
-      <div class="modal__content">
-        <div class="modal__title">КОНТАКТЫ ДЛЯ ПОДТВЕРЖДЕНИЯ ЗАЯВКИ</div>
-      </div>
-    </div>
-  </div>
-  <div class="modal" data="js-modal" data-modal-name="success">
-    <div class="modal__body">
-      <button class="modal__close" data="js-close-modal" data-for-modal="success">
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="8.63611" y1="21.364" x2="21.364" y2="8.63603" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-          <line x1="21.364" y1="21.364" x2="8.63606" y2="8.63605" stroke="white" stroke-width="2"
-                stroke-linecap="round" />
-        </svg>
-      </button>
-      <div class="modal__content">
-        <div class="modal__title">Заявка принята</div>
-      </div>
-    </div>
-  </div>
+  @@include('modules/modals/check.html')
+  @@include('modules/modals/confirm.html')
+  @@include('modules/modals/success.html')
 
   <script src="./js/vendors.js"></script>
   <script src="./js/main.js"></script>
