@@ -238,7 +238,12 @@ img {
     }
 
     @media (max-width: 576px) {
+      width: 100%;
       margin-left: 0;
+
+      .base-button {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -611,12 +616,11 @@ img {
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
   }
-  
+
   &__content {
     max-height: 768px;
     overflow: hidden;
     overflow-y: auto;
-
 
     padding: 55px 50px;
 
@@ -632,6 +636,23 @@ img {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+
+    a {
+      display: flex;
+      align-items: center;
+      margin-left: 40px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+
+      color: #eb0045;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 9px;
+      }
+    }
   }
 
   &__close {
@@ -673,7 +694,51 @@ img {
 
   &__small-text {
     line-height: 24px;
-    /* #253746 */
+
+    &--price {
+      margin-left: 19px;
+      font-weight: 700;
+
+      color: #eb0045;
+    }
+
+    sup {
+      vertical-align: super;
+    }
+  }
+
+  &__small-content-passport {
+    position: relative;
+    margin-bottom: 15px;
+
+    &__title {
+      font-weight: 700;
+      color: #324351;
+      cursor: pointer;
+
+      svg {
+        margin-left: 2px;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      top: 30px;
+      padding: 20px 23px;
+      background-color: #ffffff;
+      border-radius: 3px;
+      filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+    }
+
+    &.hidden {
+      .modal__small-content-passport__title svg {
+        margin-bottom: -3px;
+        transform: rotate(180deg);
+      }
+      .modal__small-content-passport__content {
+        display: none;
+      }
+    }
   }
 
   &--check {
@@ -707,10 +772,11 @@ img {
       margin-bottom: 15px;
 
       span {
-      font-size: 16px;
-      font-weight: 400;
-      color: #324351;
-    }}
+        font-size: 16px;
+        font-weight: 400;
+        color: #324351;
+      }
+    }
   }
 
   &--confirm {

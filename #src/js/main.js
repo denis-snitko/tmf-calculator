@@ -78,13 +78,13 @@ const counter = () => {
 };
 
 let selectedDate = '';
-const calendar = () => {
+const calendarStep_1 = () => {
   const today = new Date();
   let dayInt = today.getDate();
   let month = today.getMonth();
   let year = today.getFullYear();
 
-  const calendarBody = document.querySelector('.js-calendar-days');
+  const calendarBody = document.querySelector('.js-calendar-days-step-1');
 
   const months = [
     'Январь',
@@ -103,8 +103,8 @@ const calendar = () => {
 
   selectedDate = `${dayInt} ${months[month]} ${year}`;
 
-  const nextBtn = document.querySelector('.js-calendar-next');
-  const prevBtn = document.querySelector('.js-calendar-prev');
+  const nextBtn = document.querySelector('.js-calendar-next-step-1');
+  const prevBtn = document.querySelector('.js-calendar-prev-step-1');
 
   const showDate = (event) => {
     calendarBody.querySelectorAll('li').forEach((el) => el.classList.remove('active'));
@@ -158,8 +158,110 @@ const calendar = () => {
       calendarBody.appendChild(cell);
     }
 
-    document.querySelector('.js-calendar-month').innerHTML = `${months[month]}, `;
-    document.querySelector('.js-calendar-year').innerHTML = year;
+    document.querySelector('.js-calendar-month-step-1').innerHTML = `${months[month]}, `;
+    document.querySelector('.js-calendar-year-step-1').innerHTML = year;
+  };
+
+  showCalendar(month, year);
+
+  const next = () => {
+    year = month === 11 ? year + 1 : year;
+    month = (month + 1) % 12;
+    showCalendar(month, year);
+  };
+
+  const previous = () => {
+    year = month === 0 ? year - 1 : year;
+    month = month === 0 ? 11 : month - 1;
+    showCalendar(month, year);
+  };
+
+  prevBtn.addEventListener('click', () => previous());
+  nextBtn.addEventListener('click', () => next());
+};
+
+const calendarStep_3 = () => {
+  const today = new Date();
+  let dayInt = today.getDate();
+  let month = today.getMonth();
+  let year = today.getFullYear();
+
+  const calendarBody = document.querySelector('.js-calendar-days-step-3');
+
+  const months = [
+    'Январь',
+    'Февраль',
+    'Март',
+    'Апрель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+    'Ноябрь',
+    'Декабрь',
+  ];
+
+  selectedDate = `${dayInt} ${months[month]} ${year}`;
+
+  const nextBtn = document.querySelector('.js-calendar-next-step-3');
+  const prevBtn = document.querySelector('.js-calendar-prev-step-3');
+
+  const showDate = (event) => {
+    calendarBody.querySelectorAll('li').forEach((el) => el.classList.remove('active'));
+
+    event.classList.add('active');
+
+    let showYear = event.getAttribute('data-year');
+    let showMonth = event.getAttribute('data-month');
+    let showDay = event.getAttribute('data-day');
+
+    selectedDate = `${showDay} ${months[showMonth]} ${showYear}`;
+  };
+
+  const daysInMonth = (month, year) => {
+    return new Date(year, month + 1, 0).getDate();
+  };
+
+  const blankDates = (count) => {
+    for (let x = 0; x < count; x++) {
+      let cell = document.createElement('li');
+      let cellText = document.createTextNode('');
+      cell.appendChild(cellText);
+      cell.classList.add('empty');
+      calendarBody.appendChild(cell);
+    }
+  };
+
+  const showCalendar = (month, year) => {
+    let firstDay = new Date(year, month).getDay();
+    calendarBody.innerHTML = '';
+    let totalDays = daysInMonth(month, year);
+
+    blankDates(firstDay === 0 ? 6 : firstDay - 1);
+    for (let day = 1; day <= totalDays; day++) {
+      const cell = document.createElement('li');
+      const cellText = document.createTextNode(day);
+
+      if (dayInt === day && month === today.getMonth() && year === today.getFullYear()) {
+        cell.classList.add('active');
+      }
+
+      cell.setAttribute('data-day', day);
+      cell.setAttribute('data-month', month);
+      cell.setAttribute('data-year', year);
+
+      cell.classList.add('singleDay');
+      cell.appendChild(cellText);
+      cell.onclick = function (e) {
+        showDate(e.target);
+      };
+      calendarBody.appendChild(cell);
+    }
+
+    document.querySelector('.js-calendar-month-step-3').innerHTML = `${months[month]}, `;
+    document.querySelector('.js-calendar-year-step-3').innerHTML = year;
   };
 
   showCalendar(month, year);
@@ -203,10 +305,16 @@ const customSelectHandler = () => {
         document.querySelectorAll('.custom-select__select-text').forEach((el) => el.classList.remove('selected'));
         element.querySelector('.custom-select__select-text').classList.add('selected');
 
-        const currentValue = element.querySelector('.custom-select__select-text').textContent;
+        const currentValue = element.querySelector('.custom-select__select-text').textContent.trim();
 
-        EL_selectInput.value = currentValue.trim();
+        EL_selectInput.value = currentValue;
         EL_currentPaymentVariant.textContent = currentValue;
+
+        if (currentValue === 'Другое') {
+          document.querySelector('.js-step-2-textarea').style.display = 'block';
+        } else {
+          document.querySelector('.js-step-2-textarea').style.display = 'none';
+        }
       });
     });
   }
@@ -515,14 +623,26 @@ const formSubmitHandler = () => {
   });
 };
 
+const showPassportData = () => {
+  const EL_title = document.querySelector('.js-passport-title');
+
+  if (!EL_title) return;
+
+  EL_title.addEventListener('click', (event) => {
+    EL_title.closest('.modal__small-content-passport').classList.toggle('hidden');
+  });
+};
+
 addEventListener('DOMContentLoaded', () => {
   openStepHandler();
   activeTab();
   counter();
-  calendar();
+  calendarStep_1();
+  calendarStep_3();
   customSelectHandler();
   timeSelectorHandler();
   openModal();
+  showPassportData();
 
   formSubmitHandler();
 });

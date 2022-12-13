@@ -9,7 +9,19 @@
       </svg>
     </button>
     <div class="modal__content">
-      <div class="modal__title">Подтверждение услуг</div>
+      <div class="modal__title flex items-center justify-between">
+        Подтверждение услуг
+        <div class="flex">
+          <a href="#">
+            <img src="./img/icons/edit.svg" alt="#">
+            Редактировать
+          </a>
+          <a href="#" download="#">
+            <img src="./img/icons/download.svg" alt="">
+            Скачать шаблон
+          </a>
+        </div>
+      </div>
       <div class="row-flex">
         <div class="col-6 white-block">
           <div class="steps__second-title flex items-center justify-between">
@@ -62,6 +74,49 @@
             <div class="modal__small-title">Номер телефона</div>
             <div class="modal__small-text">+375 (29) 767 - 98 - 78</div>
           </div>
+          <div class="modal__small-content-passport hidden">
+            <div class="modal__small-content-passport__title js-passport-title">
+              Паспортные данные
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.41421" y1="5.65692" x2="5.65685" y2="9.89956" stroke="#253746" stroke-width="2" stroke-linecap="round"/>
+                <line x1="5.65674" y1="9.8996" x2="9.89938" y2="5.65696" stroke="#253746" stroke-width="2" stroke-linecap="round"/>
+                </svg>                
+            </div>
+            <div class="modal__small-content-passport__content">
+              <div class="flex justify-between">
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Адрес</div>
+                  <div class="modal__small-text">Беларусь</div>
+                </div>
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Серия</div>
+                  <div class="modal__small-text">МР</div>
+                </div>
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Номер</div>
+                  <div class="modal__small-text">1234567</div>
+                </div>
+              </div>
+              <div class="flex justify-between">
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Идентификационный номер</div>
+                  <div class="modal__small-text">23456798765432</div>
+                </div>
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Дата</div>
+                  <div class="modal__small-text">01.03.2021</div>
+                </div>
+              </div>
+              <div class="modal__small-content">
+                <div class="modal__small-title">Адрес прописки</div>
+                <div class="modal__small-text">г. Минск, ул. Грушевская, д.15-1, кв. 198</div>
+              </div>
+              <div class="modal__small-content">
+                <div class="modal__small-title">Кем выдан</div>
+                <div class="modal__small-text">Борисовское РУВД Минской области</div>
+              </div>
+            </div>
+          </div>
           <div class="modal__small-content">
             <div class="modal__small-title">Адрес</div>
             <div class="modal__small-text">г. Минск, ул. Грушевская, д.15-1, кв. 198</div>
@@ -99,7 +154,7 @@
           </div>
           <div class="modal__small-content">
             <div class="modal__small-title">Объем</div>
-            <div class="modal__small-text">2 м2</div>
+            <div class="modal__small-text">2 м<sup>2</sup></div>
           </div>
         </div>
 
@@ -108,7 +163,7 @@
         <div class="steps__second-title">Услуги</div>
         <div class="modal__small-content">
           <div class="modal__small-title">Услуга</div>
-          <div class="modal__small-text">Курьерские отправления, Перевозка без ТТН</div>
+          <div class="modal__small-text">Курьерские отправления, Перевозка без ТТН <span class="modal__small-text--price">15,32 руб</span></div>
         </div>
         <div class="modal__small-content">
           <div class="modal__small-title">Дополнительные услуги</div>

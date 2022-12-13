@@ -232,10 +232,10 @@
         <div class="calendar">
           <div class="calendar__header">
             <ul>
-              <li class="calendar__prev js-calendar-prev">&#10094;</li>
-              <li class="calendar__month js-calendar-month"></li>
-              <li class="calendar__year js-calendar-year"></li>
-              <li class="calendar__next js-calendar-next">&#10095;</li>
+              <li class="calendar__prev js-calendar-prev-step-1">&#10094;</li>
+              <li class="calendar__month js-calendar-month-step-1"></li>
+              <li class="calendar__year js-calendar-year-step-1"></li>
+              <li class="calendar__next js-calendar-next-step-1">&#10095;</li>
             </ul>
           </div>
 
@@ -249,7 +249,7 @@
             <li style="color: #EB0045;">ВС</li>
           </ul>
 
-          <ul class="calendar__days js-calendar-days"></ul>
+          <ul class="calendar__days js-calendar-days-step-1"></ul>
         </div>
 
         <div class="flex items-center justify-between">
@@ -262,31 +262,15 @@
                 <div class="hours">
                   <input class="hours__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-hour-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-hour-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-hour-up"></button>
+                    <button type="button" class="down js-hour-down"></button>
                   </div>
                 </div>
                 <div class="minutes">
                   <input class="minutes__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-minutes-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-minutes-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-minutes-up"></button>
+                    <button type="button" class="down js-minutes-down"></button>
                   </div>
                 </div>
               </div>
@@ -302,31 +286,15 @@
                 <div class="hours">
                   <input class="hours__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-hour-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-hour-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-hour-up"></button>
+                    <button type="button" class="down js-hour-down"></button>
                   </div>
                 </div>
                 <div class="minutes">
                   <input class="minutes__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-minutes-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-minutes-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-minutes-up"></button>
+                    <button type="button" class="down js-minutes-down"></button>
                   </div>
                 </div>
               </div>
@@ -345,16 +313,8 @@
                 <div class="hours">
                   <input class="hours__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-hour-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-hour-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-hour-up"></button>
+                    <button type="button" class="down js-hour-down"></button>
                   </div>
                 </div>
                 <div class="minutes">
@@ -365,11 +325,7 @@
                         <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
                       </svg>
                     </button>
-                    <button type="button" class="down js-minutes-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="down js-minutes-down"></button>
                   </div>
                 </div>
               </div>
@@ -391,11 +347,7 @@
                         <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
                       </svg>
                     </button>
-                    <button type="button" class="down js-hour-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="down js-hour-down"></button>
                   </div>
                 </div>
                 <div class="minutes">
@@ -406,11 +358,7 @@
                         <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
                       </svg>
                     </button>
-                    <button type="button" class="down js-minutes-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="down js-minutes-down"></button>
                   </div>
                 </div>
               </div>
@@ -602,11 +550,16 @@
                   Снег
                 </div>
               </div>
+              <div class="custom-select__select-item js-select-item">
+                <div class="custom-select__select-text">
+                  Другое
+                </div>
+              </div>
 
             </div>
           </div>
         </div>
-        <div class="second__textarea">
+        <div class="second__textarea js-step-2-textarea" style="display: none;">
           <div class="base-textarea">
             <textarea name="shipmentVariant" for="input-101" placeholder="Ваш вариант груза"></textarea>
             <label for="input-101">Ваш вариант груза</label>
@@ -633,12 +586,13 @@
     <div class="row-flex">
       <div class="col-4_82">
         <div class="steps__second-title flex items-center justify-between">
-          Отправитель
+          Получатель
           <label class="custom-radio" for="for-58112">
             <div class="steps__second-title-error js-payer-error">
               Выбрать плательщика
             </div>
-            <input class="custom-radio--hidden js-check-payer" id="for-58112" type="radio" name="step-58112" value="step-58112">
+            <input class="custom-radio--hidden js-check-payer" id="for-58112" type="radio" name="step-58112"
+                   value="step-58112">
             <div class="custom-radio__pseudo"></div>
             Плательщик
           </label>
@@ -655,59 +609,68 @@
 
           <div class="tabs__content js-step-content" id="content-5" data-name="individualArrival" data-step="step_3">
             <div class="base-input">
-              <input type="text" for="input-10" placeholder="ФИО"  name="individualArrivalName" data-required>
+              <input type="text" for="input-10" placeholder="ФИО" name="individualArrivalName" data-required>
               <label for="input-10">ФИО</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-20" placeholder="Номер телефона" name="individualArrivalPhone" data-required>
+              <input type="text" for="input-20" placeholder="Номер телефона" name="individualArrivalPhone"
+                     data-required>
               <label for="input-20">Номер телефона</label>
             </div>
             <div class="h5">Паспортные данные</div>
             <div class="flex">
               <div class="base-input country">
-                <input type="text" for="input-101" placeholder="Страна регистрации" name="individualArrivalRegCountry" data-required>
+                <input type="text" for="input-101" placeholder="Страна регистрации" name="individualArrivalRegCountry"
+                       data-required>
                 <label for="input-101">Страна регистрации</label>
               </div>
               <div class="base-input series">
-                <input type="text" for="input-102" placeholder="Серия" name="individualArrivalPassportSeries" data-required>
+                <input type="text" for="input-102" placeholder="Серия" name="individualArrivalPassportSeries"
+                       data-required>
                 <label for="input-102">Серия</label>
               </div>
               <div class="base-input">
-                <input type="text" for="input-103" placeholder="Номер" name="individualArrivalPassportNumber" data-required>
+                <input type="text" for="input-103" placeholder="Номер" name="individualArrivalPassportNumber"
+                       data-required>
                 <label for="input-103">Номер</label>
               </div>
             </div>
             <div class="flex justify-between">
               <div class="base-input identification">
-                <input type="text" for="input-112" placeholder="Идентификационный номер"  name="individualArrivalPassportIdn" data-required>
+                <input type="text" for="input-112" placeholder="Идентификационный номер"
+                       name="individualArrivalPassportIdn" data-required>
                 <label for="input-112">Идентификационный номер</label>
               </div>
               <div class="base-input date">
-                <input type="text" for="input-113" placeholder="Дата" name="individualArrivalPassportDate" data-required>
+                <input type="text" for="input-113" placeholder="Дата" name="individualArrivalPassportDate"
+                       data-required>
                 <label for="input-113">Дата</label>
               </div>
             </div>
             <div class="base-input">
-              <input type="text" for="input-30" placeholder="Адрес прописки" name="individualArrivalPassportResidency" data-required>
+              <input type="text" for="input-30" placeholder="Адрес прописки" name="individualArrivalPassportResidency"
+                     data-required>
               <label for="input-30">Адрес прописки</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-40" placeholder="Кем выдан" name="individualArrivalPassportIssued" data-required>
+              <input type="text" for="input-40" placeholder="Кем выдан" name="individualArrivalPassportIssued"
+                     data-required>
               <label for="input-40">Кем выдан</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-40" placeholder="ID-паспорт, вид на жительство"  name="individualArrivalPassportAsID">
+              <input type="text" for="input-40" placeholder="ID-паспорт, вид на жительство"
+                     name="individualArrivalPassportAsID">
               <label for="input-40">ID-паспорт, вид на жительство</label>
             </div>
           </div>
 
-          <div class="tabs__content js-step-content" data-step="step_3" id="content-6"  data-name="legalArrival">
+          <div class="tabs__content js-step-content" data-step="step_3" id="content-6" data-name="legalArrival">
             <div class="base-input">
               <input type="text" for="input-1" placeholder="Организация или ИП" name="legalArrivalName" data-required>
               <label for="input-1">Организация или ИП</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-2" placeholder="УНП"  name="legalArrivalUNP" data-required>
+              <input type="text" for="input-2" placeholder="УНП" name="legalArrivalUNP" data-required>
               <label for="input-2">УНП</label>
             </div>
             <div class="h5">Контактные данные</div>
@@ -743,7 +706,8 @@
           </div>
 
 
-          <div class="tabs__content js-step-content" data-step="step_3" id="content-7" data-name="takeFromMeArrival" data-step="step_3">
+          <div class="tabs__content js-step-content" data-step="step_3" id="content-7" data-name="takeFromMeArrival"
+               data-step="step_3">
             <div class="base-input">
               <input type="text" for="input-1122" placeholder="Город" name="takeFromMeArrivalCity" data-required>
               <label for="input-1122">Город</label>
@@ -758,7 +722,8 @@
                 <label for="input-1011">Дом</label>
               </div>
               <div class="base-input half">
-                <input type="text" for="input-10211" placeholder="Кв/офис" name="takeFromMeArrivalApartment" data-required>
+                <input type="text" for="input-10211" placeholder="Кв/офис" name="takeFromMeArrivalApartment"
+                       data-required>
                 <label for="input-10211">Кв/офис</label>
               </div>
             </div>
@@ -774,7 +739,8 @@
             </div>
           </div>
 
-          <div class="tabs__content js-step-content" data-step="step_3" id="content-8" data-name="bringMySelfArrival" data-step="step_3">
+          <div class="tabs__content js-step-content" data-step="step_3" id="content-8" data-name="bringMySelfArrival"
+               data-step="step_3">
             <div class="base-input">
               <input type="text" for="input-112234" placeholder="Город" name="bringMySelfArrivalCity" data-required>
               <label for="input-112234">Город</label>
@@ -789,7 +755,8 @@
                 <label for="input-101134">Дом</label>
               </div>
               <div class="base-input half">
-                <input type="text" for="input-1021134" placeholder="Кв/офис" name="bringMySelfArrivalApartment" data-required>
+                <input type="text" for="input-1021134" placeholder="Кв/офис" name="bringMySelfArrivalApartment"
+                       data-required>
                 <label for="input-1021134">Кв/офис</label>
               </div>
             </div>
@@ -807,9 +774,11 @@
 
           <button class="show-map">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10Z" stroke="#EB0045" stroke-width="2"/>
-              <path d="M3.19707 7.31455C4.79633 0.223027 15.2118 0.231216 16.803 7.32274C17.7365 11.4827 15.1712 15.0039 12.9225 17.1821C10 19.606 10 19.606 7.06939 17.1821C4.8288 15.0039 2.26349 11.4745 3.19707 7.31455Z" stroke="#EB0045" stroke-width="2"/>
-              </svg>              
+              <path d="M10 10C10.5523 10 11 9.55228 11 9C11 8.44772 10.5523 8 10 8C9.44772 8 9 8.44772 9 9C9 9.55228 9.44772 10 10 10Z"
+                    stroke="#EB0045" stroke-width="2" />
+              <path d="M3.19707 7.31455C4.79633 0.223027 15.2118 0.231216 16.803 7.32274C17.7365 11.4827 15.1712 15.0039 12.9225 17.1821C10 19.606 10 19.606 7.06939 17.1821C4.8288 15.0039 2.26349 11.4745 3.19707 7.31455Z"
+                    stroke="#EB0045" stroke-width="2" />
+            </svg>
             Посмотреть место на карте
           </button>
 
@@ -825,37 +794,153 @@
           </div>
         </div>
 
+        <div class="calendar">
+          <div class="calendar__header">
+            <ul>
+              <li class="calendar__prev js-calendar-prev-step-3">&#10094;</li>
+              <li class="calendar__month js-calendar-month-step-3"></li>
+              <li class="calendar__year js-calendar-year-step-3"></li>
+              <li class="calendar__next js-calendar-next-step-3">&#10095;</li>
+            </ul>
+          </div>
+
+          <ul class="calendar__weekdays">
+            <li>ПН</li>
+            <li>ВТ</li>
+            <li>СР</li>
+            <li>ЧТ</li>
+            <li>ПТ</li>
+            <li style="color: #EB0045;">СБ</li>
+            <li style="color: #EB0045;">ВС</li>
+          </ul>
+
+          <ul class="calendar__days js-calendar-days-step-3"></ul>
+        </div>
+
         <div class="flex items-center justify-between">
-          <div class="base-input time">
-            <input type="text" for="input-456" placeholder="00:00">
-            <label for="input-456">Время</label>
+          <div class="base-input time js-time-selector">
+            <input type="text" for="input-456" placeholder="00:00" name="step-3-arrivalTime-from">
+            <label for="input-456">Время(начало)</label>
+
+            <div class="time__selector">
+              <div class="time__selector-input">
+                <div class="hours">
+                  <input class="hours__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button type="button" class="up js-hour-up"></button>
+                    <button type="button" class="down js-hour-down"></button>
+                  </div>
+                </div>
+                <div class="minutes">
+                  <input class="minutes__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button type="button" class="up js-minutes-up"></button>
+                    <button type="button" class="down js-minutes-down"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="time-divider">-</span>
-          <div class="base-input time">
-            <input type="text" for="input-456" placeholder="00:00">
+          <div class="base-input time js-time-selector">
+            <input type="text" for="input-45634" placeholder="00:00" name="step-3-arrivalTime-to">
+            <label for="input-45634">Время(конец)</label>
+            <div class="time__selector">
+              <div class="time__selector-input">
+                <div class="hours">
+                  <input class="hours__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button type="button" class="up js-hour-up"></button>
+                    <button type="button" class="down js-hour-down"></button>
+                  </div>
+                </div>
+                <div class="minutes">
+                  <input class="minutes__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button type="button" class="up js-minutes-up"></button>
+                    <button type="button" class="down js-minutes-down"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
         <div class="flex items-center justify-between">
-          <div class="base-input time">
-            <input type="text" for="input-459" placeholder="00:00">
-            <label for="input-459">Обед</label>
+          <div class="base-input time js-time-selector">
+            <input type="text" for="input-459" placeholder="00:00" name="step-3-launchTime-from">
+            <label for="input-459">Обед(начало)</label>
+
+            <div class="time__selector">
+              <div class="time__selector-input">
+                <div class="hours">
+                  <input class="hours__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button type="button" class="up js-hour-up"></button>
+                    <button type="button" class="down js-hour-down"></button>
+                  </div>
+                </div>
+                <div class="minutes">
+                  <input class="minutes__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button type="button" class="up js-minutes-up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
+                      </svg>
+                    </button>
+                    <button type="button" class="down js-minutes-down"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
           <span class="time-divider">-</span>
-          <div class="base-input time">
-            <input type="text" for="input-459" placeholder="00:00">
+          <div class="base-input time js-time-selector">
+            <input type="text" for="input-459" placeholder="00:00" name="step-3-launchTime-to">
+            <label for="input-459">Обед(конец)</label>
+
+            <div class="time__selector">
+              <div class="time__selector-input">
+                <div class="hours">
+                  <input class="hours__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button type="button" class="up js-hour-up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
+                      </svg>
+                    </button>
+                    <button type="button" class="down js-hour-down"></button>
+                  </div>
+                </div>
+                <div class="minutes">
+                  <input class="minutes__input" type="number" value="00">
+                  <div class="time__selector-input-buttons">
+                    <button type="button" class="up js-minutes-up">
+                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
+                      </svg>
+                    </button>
+                    <button type="button" class="down js-minutes-down"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-        
+
       </div>
     </div>
 
-      <div class="first__textarea">
-        <div class="base-textarea">
-          <textarea name="step-3-comment" for="input-10" placeholder="Ваш комментарий"></textarea>
-          <label for="input-10">Ваш комментарий</label>
-        </div>
+    <div class="first__textarea">
+      <div class="base-textarea">
+        <textarea name="step-3-comment" for="input-10" placeholder="Ваш комментарий"></textarea>
+        <label for="input-10">Ваш комментарий</label>
       </div>
+    </div>
   </div>
 </div>
         <div class="step fourth white-block js-step">
@@ -1045,7 +1130,19 @@
       </svg>
     </button>
     <div class="modal__content">
-      <div class="modal__title">Подтверждение услуг</div>
+      <div class="modal__title flex items-center justify-between">
+        Подтверждение услуг
+        <div class="flex">
+          <a href="#">
+            <img src="./img/icons/edit.svg" alt="#">
+            Редактировать
+          </a>
+          <a href="#" download="#">
+            <img src="./img/icons/download.svg" alt="">
+            Скачать шаблон
+          </a>
+        </div>
+      </div>
       <div class="row-flex">
         <div class="col-6 white-block">
           <div class="steps__second-title flex items-center justify-between">
@@ -1098,6 +1195,49 @@
             <div class="modal__small-title">Номер телефона</div>
             <div class="modal__small-text">+375 (29) 767 - 98 - 78</div>
           </div>
+          <div class="modal__small-content-passport hidden">
+            <div class="modal__small-content-passport__title js-passport-title">
+              Паспортные данные
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.41421" y1="5.65692" x2="5.65685" y2="9.89956" stroke="#253746" stroke-width="2" stroke-linecap="round"/>
+                <line x1="5.65674" y1="9.8996" x2="9.89938" y2="5.65696" stroke="#253746" stroke-width="2" stroke-linecap="round"/>
+                </svg>                
+            </div>
+            <div class="modal__small-content-passport__content">
+              <div class="flex justify-between">
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Адрес</div>
+                  <div class="modal__small-text">Беларусь</div>
+                </div>
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Серия</div>
+                  <div class="modal__small-text">МР</div>
+                </div>
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Номер</div>
+                  <div class="modal__small-text">1234567</div>
+                </div>
+              </div>
+              <div class="flex justify-between">
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Идентификационный номер</div>
+                  <div class="modal__small-text">23456798765432</div>
+                </div>
+                <div class="modal__small-content">
+                  <div class="modal__small-title">Дата</div>
+                  <div class="modal__small-text">01.03.2021</div>
+                </div>
+              </div>
+              <div class="modal__small-content">
+                <div class="modal__small-title">Адрес прописки</div>
+                <div class="modal__small-text">г. Минск, ул. Грушевская, д.15-1, кв. 198</div>
+              </div>
+              <div class="modal__small-content">
+                <div class="modal__small-title">Кем выдан</div>
+                <div class="modal__small-text">Борисовское РУВД Минской области</div>
+              </div>
+            </div>
+          </div>
           <div class="modal__small-content">
             <div class="modal__small-title">Адрес</div>
             <div class="modal__small-text">г. Минск, ул. Грушевская, д.15-1, кв. 198</div>
@@ -1135,7 +1275,7 @@
           </div>
           <div class="modal__small-content">
             <div class="modal__small-title">Объем</div>
-            <div class="modal__small-text">2 м2</div>
+            <div class="modal__small-text">2 м<sup>2</sup></div>
           </div>
         </div>
 
@@ -1144,7 +1284,7 @@
         <div class="steps__second-title">Услуги</div>
         <div class="modal__small-content">
           <div class="modal__small-title">Услуга</div>
-          <div class="modal__small-text">Курьерские отправления, Перевозка без ТТН</div>
+          <div class="modal__small-text">Курьерские отправления, Перевозка без ТТН <span class="modal__small-text--price">15,32 руб</span></div>
         </div>
         <div class="modal__small-content">
           <div class="modal__small-title">Дополнительные услуги</div>

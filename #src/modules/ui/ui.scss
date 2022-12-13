@@ -156,9 +156,17 @@
     color: $base-text-color;
     font-size: rem(16px);
 
+    @media (max-width: 576px) {
+      padding: 12px;
+    }
+
     &::placeholder {
       font-size: rem(16px);
       color: #a2aab5;
+
+      @media (max-width: 576px) {
+        font-size: rem(12px);
+      }
     }
 
     &:focus ~ label {
@@ -223,6 +231,10 @@
     @media (max-width: 1024px) {
       max-width: 72px;
     }
+
+    @media (max-width: 768px) {
+      max-width: 100px;
+    }
   }
 }
 
@@ -240,6 +252,10 @@
     box-shadow: 0px 4px 30px rgba(162, 170, 181, 0.2);
     border-radius: 2px;
 
+    @media (max-width: 768px) {
+      right: -108px;
+    }
+
     &-input {
       display: flex;
       align-items: center;
@@ -253,6 +269,7 @@
 
         .up,
         .down {
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -262,6 +279,13 @@
           border: none;
           border-radius: 2px;
 
+          &:after {
+          content: '';
+          position: absolute;
+          top: 7px;
+          left: 8px;
+          }
+
           &:hover {
             background-color: #344d63;
           }
@@ -269,6 +293,19 @@
 
         .up {
           margin-bottom: 2px;
+
+          &:after {
+            border: 3px solid transparent; 
+            border-bottom: 3px solid #ffffff;
+          }
+        }
+
+        .down {
+          &:after {
+            top: 10px;
+            border: 3px solid transparent; 
+            border-top: 3px solid #ffffff;
+          }
         }
       }
 
@@ -308,6 +345,12 @@
       }
     }
   }
+
+  @media (max-width: 576px) {
+    &:last-child .time__selector {
+      right: 0;
+    }
+  }
 }
 
 .time-divider {
@@ -340,6 +383,8 @@
     border-radius: 3px;
 
     color: $base-text-color;
+
+    resize: vertical;
 
     &::placeholder {
       font-size: 12px;

@@ -216,10 +216,10 @@
         <div class="calendar">
           <div class="calendar__header">
             <ul>
-              <li class="calendar__prev js-calendar-prev">&#10094;</li>
-              <li class="calendar__month js-calendar-month"></li>
-              <li class="calendar__year js-calendar-year"></li>
-              <li class="calendar__next js-calendar-next">&#10095;</li>
+              <li class="calendar__prev js-calendar-prev-step-1">&#10094;</li>
+              <li class="calendar__month js-calendar-month-step-1"></li>
+              <li class="calendar__year js-calendar-year-step-1"></li>
+              <li class="calendar__next js-calendar-next-step-1">&#10095;</li>
             </ul>
           </div>
 
@@ -233,7 +233,7 @@
             <li style="color: #EB0045;">ВС</li>
           </ul>
 
-          <ul class="calendar__days js-calendar-days"></ul>
+          <ul class="calendar__days js-calendar-days-step-1"></ul>
         </div>
 
         <div class="flex items-center justify-between">
@@ -246,31 +246,15 @@
                 <div class="hours">
                   <input class="hours__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-hour-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-hour-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-hour-up"></button>
+                    <button type="button" class="down js-hour-down"></button>
                   </div>
                 </div>
                 <div class="minutes">
                   <input class="minutes__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-minutes-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-minutes-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-minutes-up"></button>
+                    <button type="button" class="down js-minutes-down"></button>
                   </div>
                 </div>
               </div>
@@ -286,31 +270,15 @@
                 <div class="hours">
                   <input class="hours__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-hour-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-hour-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-hour-up"></button>
+                    <button type="button" class="down js-hour-down"></button>
                   </div>
                 </div>
                 <div class="minutes">
                   <input class="minutes__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-minutes-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-minutes-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-minutes-up"></button>
+                    <button type="button" class="down js-minutes-down"></button>
                   </div>
                 </div>
               </div>
@@ -329,16 +297,8 @@
                 <div class="hours">
                   <input class="hours__input" type="number" value="00">
                   <div class="time__selector-input-buttons">
-                    <button type="button" class="up js-hour-up">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
-                      </svg>
-                    </button>
-                    <button type="button" class="down js-hour-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="up js-hour-up"></button>
+                    <button type="button" class="down js-hour-down"></button>
                   </div>
                 </div>
                 <div class="minutes">
@@ -349,11 +309,7 @@
                         <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
                       </svg>
                     </button>
-                    <button type="button" class="down js-minutes-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="down js-minutes-down"></button>
                   </div>
                 </div>
               </div>
@@ -375,11 +331,7 @@
                         <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
                       </svg>
                     </button>
-                    <button type="button" class="down js-hour-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="down js-hour-down"></button>
                   </div>
                 </div>
                 <div class="minutes">
@@ -390,11 +342,7 @@
                         <path d="M3 0L5.59808 3.75H0.401924L3 0Z" fill="white" />
                       </svg>
                     </button>
-                    <button type="button" class="down js-minutes-down">
-                      <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 4L5.59808 0.25H0.401924L3 4Z" fill="white" />
-                      </svg>
-                    </button>
+                    <button type="button" class="down js-minutes-down"></button>
                   </div>
                 </div>
               </div>

@@ -26,6 +26,14 @@
       display: inline-block;
       max-width: 102px;
       width: 100%;
+
+      @media (max-width: 414px) {
+        max-width: 90px;
+
+        &:last-child {
+          max-width: 100%;
+        }
+      }
     }
   }
 
