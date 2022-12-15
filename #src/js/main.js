@@ -25,6 +25,12 @@ const activeTab = () => {
         .forEach((el) => el.classList.remove('active'));
 
       document.querySelector(`[for="${currentElement.id}"]`).classList.toggle('active');
+
+      document.querySelector('.warning-tooltip').style.display = 'none';
+
+      if (document.querySelector(`[id="tab-1"]`).checked && document.querySelector(`[id="tab-6"]`).checked) {
+        document.querySelector('.warning-tooltip').style.display = 'block';
+      }
     });
   });
 };
