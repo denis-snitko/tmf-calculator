@@ -1,4 +1,14 @@
 <div class="step third white-block js-step">
+  
+  <div class="warning-tooltip">
+    <div class="warning-tooltip__header">
+      <span>!</span> Внимание!
+    </div>
+    <div class="warning-tooltip__text">
+      Отправка груза юридическому лицу невозможна в связи с ограничениями в законодательстве Республики Беларусь
+    </div>
+  </div>
+
   <div class="step__title">
     <div class="step__button-open js-step-button-open">
       <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +51,7 @@
               <label for="input-10">ФИО</label>
             </div>
             <div class="base-input">
-              <input type="text" for="input-20" placeholder="Номер телефона" name="individualArrivalPhone"
+              <input type="text" for="input-20" placeholder="+375 (_ _) _ _ - _ _ - _ _ " name="individualArrivalPhone"
                      data-required>
               <label for="input-20">Номер телефона</label>
             </div>
@@ -70,7 +80,7 @@
                 <label for="input-112">Идентификационный номер</label>
               </div>
               <div class="base-input date">
-                <input type="text" for="input-113" placeholder="Дата" name="individualArrivalPassportDate"
+                <input type="text" for="input-113" placeholder="00.00.0000" name="individualArrivalPassportDate"
                        data-required>
                 <label for="input-113">Дата</label>
               </div>
@@ -114,10 +124,10 @@
         </div>
       </div>
       <div class="col-4_25">
-        <div class="steps__second-title  flex items-center justify-between">
+        <div class="steps__second-title flex items-center justify-between">
           Адрес
-          <label class="custom-radio" for="for-68112">
-            <input class="custom-radio--hidden" id="for-68112" type="radio" name="step-68112" value="step-581">
+          <label class="custom-radio js-coordinates-trigger" for="for-68112">
+            <input class="custom-radio--hidden" id="for-68112" type="checkbox" name="trigger-step-3" value="" data-trigger="step-3">
             <div class="custom-radio__pseudo"></div>
             Координаты
           </label>
@@ -163,6 +173,16 @@
               <div class="base-input half">
                 <input type="text" for="input-11311" placeholder="Этаж" name="takeFromMeArrivalFloor">
                 <label for="input-11311">Этаж</label>
+              </div>
+            </div>
+            <div class="flex direction-column js-coordinates" data-coordinates="step-3" style="display: none;">
+              <div class="base-input">
+                <input type="text" for="input-112312" placeholder="Ширина" name="width">
+                <label for="input-112312">Ширина</label>
+              </div>
+              <div class="base-input">
+                <input type="text" for="input-112313" placeholder="Долгота" name="longitude">
+                <label for="input-112313">Долгота</label>
               </div>
             </div>
           </div>

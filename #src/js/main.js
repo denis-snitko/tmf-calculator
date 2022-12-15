@@ -13,21 +13,20 @@ const openStepHandler = () => {
 };
 
 const activeTab = () => {
-  // ! НАЧАТЬ ТУТ. ПРИ ПЕРЕКЛЮЧЕНИИ ТАБОВ ДОБАВЛЯТЬ/УДАЛЯТЬ - data-required
   const EL_tabs = document.querySelectorAll('.tabs__input');
 
-  if (EL_tabs) {
-    EL_tabs.forEach((currentElement) => {
-      currentElement.addEventListener('click', () => {
-        currentElement
-          .closest('.tabs')
-          .querySelectorAll('.js-tabs-label')
-          .forEach((el) => el.classList.remove('active'));
+  if (!EL_tabs) return;
 
-        document.querySelector(`[for="${currentElement.id}"]`).classList.toggle('active');
-      });
+  EL_tabs.forEach((currentElement) => {
+    currentElement.addEventListener('click', () => {
+      currentElement
+        .closest('.tabs')
+        .querySelectorAll('.js-tabs-label')
+        .forEach((el) => el.classList.remove('active'));
+
+      document.querySelector(`[for="${currentElement.id}"]`).classList.toggle('active');
     });
-  }
+  });
 };
 
 const openModal = () => {
@@ -633,6 +632,66 @@ const showPassportData = () => {
   });
 };
 
+const showCoordinates = () => {
+  const EL_Trigger = document.querySelectorAll('.js-coordinates-trigger input');
+
+  if (!EL_Trigger) return;
+
+  EL_Trigger.forEach((element) => {
+    element.addEventListener('click', () => {
+      const { trigger } = element.dataset;
+
+      if (element.checked) {
+        document.querySelector(`[data-coordinates="${trigger}"]`).style.display = 'flex';
+      } else {
+        document.querySelector(`[data-coordinates="${trigger}"]`).style.display = 'none';
+      }
+    });
+  });
+};
+
+const inputMasks = () => {
+  IMask(document.querySelector('[name="individualPhone"]'), {
+    mask: '{+375}(00)000-00-00',
+  });
+
+  IMask(document.querySelector('[name="individualArrivalPhone"]'), {
+    mask: '{+375}(00)000-00-00',
+  });
+
+  IMask(document.querySelector('[name="modalPhone"]'), {
+    mask: '{+375}(00)000-00-00',
+  });
+
+  IMask(document.querySelector('[name="individualName"]'), {
+    mask: /^[а-яА-ЯёЁ\s]+$/,
+  });
+  IMask(document.querySelector('[name="individualArrivalName"]'), {
+    mask: /^[а-яА-ЯёЁ\s]+$/,
+  });
+
+  IMask(document.querySelector('[name="individualPassportDate"]'), {
+    mask: Date,
+    min: new Date(2022, 0, 1),
+  });
+  IMask(document.querySelector('[name="individualArrivalPassportDate"]'), {
+    mask: Date,
+    min: new Date(2022, 0, 1),
+  });
+
+  IMask(document.querySelector('[name="individualPassportNumber"]'), {
+    mask: IMask.MaskedRange,
+    from: 0000000,
+    to: 9999999,
+  });
+
+  IMask(document.querySelector('[name="individualArrivalPassportNumber"]'), {
+    mask: IMask.MaskedRange,
+    from: 0000000,
+    to: 9999999,
+  });
+};
+
 addEventListener('DOMContentLoaded', () => {
   openStepHandler();
   activeTab();
@@ -643,6 +702,8 @@ addEventListener('DOMContentLoaded', () => {
   timeSelectorHandler();
   openModal();
   showPassportData();
+  showCoordinates();
 
   formSubmitHandler();
+  inputMasks();
 });
