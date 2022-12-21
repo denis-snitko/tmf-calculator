@@ -812,7 +812,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
   -webkit-box-align: center;
@@ -841,6 +841,7 @@ img {
 .modal__title {
   margin-bottom: 24px;
   font-size: 2rem;
+  line-height: 32px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -936,6 +937,7 @@ img {
 .modal__small-content-passport__content {
   position: absolute;
   top: 30px;
+  z-index: 1;
   padding: 20px 23px;
   background-color: #ffffff;
   border-radius: 3px;
@@ -1154,6 +1156,7 @@ img {
   display: flex;
   width: 100%;
   font-size: 15px;
+  line-height: 20px;
   cursor: pointer;
 }
 
@@ -2071,6 +2074,10 @@ img {
   .col-4_82 {
     width: calc(100% - 40px);
   }
+
+  .modal--check .col-6 {
+    width: calc(100% - 40px);
+  }
 }
 
 @media (max-width: 576px) {
@@ -2151,8 +2158,56 @@ img {
             justify-content: flex-start;
   }
 
+  .modal__body {
+    width: calc(100% - 38px);
+  }
+
   .modal__content {
     padding: 20px;
+  }
+
+  .modal__title {
+    font-size: 1.75rem;
+    text-align: left;
+  }
+
+  .modal--check .modal__content {
+    max-height: 100vh;
+  }
+
+  .modal--check .col-6 {
+    width: 100%;
+  }
+
+  .modal--check .steps__footer-price,
+  .modal--check .steps__footer-button {
+    margin-left: 0;
+  }
+
+  .modal--check .bold {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .modal--check .steps__footer-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .modal--check .steps__footer-price .sum {
+    padding-left: 5px;
+    font-size: 1.625rem;
+  }
+
+  .modal--check .white-block {
+    padding: 20px;
+  }
+
+  .modal--success {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .base-input input {
@@ -2208,11 +2263,31 @@ img {
 }
 
 @media (max-width: 414px) {
+  .modal__title a {
+    margin-left: 0;
+  }
+
+  .modal__title a:first-child {
+    margin-top: 10px;
+  }
+
+  .modal--check .flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   .second__base-input--dimensions {
     max-width: 90px;
   }
 
   .second__base-input--dimensions:last-child {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .modal__small-content--wight,
+  .modal__small-content--volume {
+    width: 50px;
   }
 }

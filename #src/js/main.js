@@ -403,8 +403,10 @@ const timeSelectorHandler = () => {
 const checkPayer = () => {
   const EL_radio = document.querySelectorAll('.js-check-payer');
 
+  const isChecked = Array.from(EL_radio).map((item) => item.checked);
+
   EL_radio.forEach((el) => {
-    if (el.checked) {
+    if (isChecked.includes(true)) {
       el.previousElementSibling.style.display = 'none';
     } else {
       el.previousElementSibling.style.display = 'block';
